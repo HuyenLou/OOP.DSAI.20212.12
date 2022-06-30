@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="606.0" prefWidth="956.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18">
+   <children>
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/i1.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="-20.0" layoutY="4.0" prefHeight="263.0" prefWidth="1010.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="-20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="4.0">
+         <children>
+            <Button alignment="BASELINE_CENTER" layoutX="106.0" layoutY="194.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="119.0" style="-fx-background-radius: 20; -fx-background-color: #02199e;" text="Help Menu" textFill="#f1f2f7">
+               <font>
+                  <Font name="VNI-Briquet  Normal" size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_CENTER" layoutX="271.0" layoutY="194.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="119.0" style="-fx-background-radius: 20; -fx-background-color: #02199e;" text="Styles" textFill="#f1f2f7">
+               <font>
+                  <Font name="VNI-Briquet  Normal" size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_CENTER" layoutX="438.0" layoutY="194.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="119.0" style="-fx-background-radius: 20; -fx-background-color: #02199e;" text="Sound" textFill="#f1f2f7">
+               <font>
+                  <Font name="VNI-Briquet  Normal" size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_CENTER" layoutX="601.0" layoutY="194.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="119.0" style="-fx-background-radius: 20; -fx-background-color: #02199e;" text="Record" textFill="#f1f2f7">
+               <font>
+                  <Font name="VNI-Briquet  Normal" size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_CENTER" layoutX="763.0" layoutY="194.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="119.0" style="-fx-background-radius: 20; -fx-background-color: #02199e;" text="Exit" textFill="#f1f2f7">
+               <font>
+                  <Font name="VNI-Briquet  Normal" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="15.0" prefWidth="970.0" style="-fx-background-radius: 20;">
+         <children>
+            <Button fx:id="C1" layoutX="48.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="D1" layoutX="89.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="E1" layoutX="130.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="F1" layoutX="173.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="Gb1" layoutX="215.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="A1" layoutX="256.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="B1" layoutX="297.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="C2" layoutX="337.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="D2" layoutX="378.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="E2" layoutX="418.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="F2" layoutX="459.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="G2" layoutX="500.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="A2" layoutX="540.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="B2" layoutX="580.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="C3" layoutX="620.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="D3" layoutX="660.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="E3" layoutX="701.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="F3" layoutX="742.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="G3" layoutX="782.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="A3" layoutX="822.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="B3" layoutX="863.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="Db1" layoutX="76.0" layoutY="409.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+            <Button fx:id="Eb1" layoutX="116.0" layoutY="409.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+            <Button fx:id="Gb1" layoutX="193.0" layoutY="409.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+            <Button fx:id="Ab1" layoutX="235.0" layoutY="409.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+            <Button fx:id="Bb1" layoutX="276.0" layoutY="409.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+            <Button fx:id="Db2" layoutX="357.0" layoutY="411.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+            <Button fx:id="Eb2" layoutX="398.0" layoutY="411.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+            <Button fx:id="Gb2" layoutX="486.0" layoutY="411.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+            <Button fx:id="Ab2" layoutX="526.0" layoutY="409.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+            <Button fx:id="Bb2" layoutX="566.0" layoutY="409.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+            <Button fx:id="Db3" layoutX="640.0" layoutY="409.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+            <Button fx:id="Eb3" layoutX="680.0" layoutY="409.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+            <Button fx:id="Gb3" layoutX="762.0" layoutY="411.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+            <Button fx:id="Ab3" layoutX="802.0" layoutY="411.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+            <Button fx:id="Bb3" layoutX="842.0" layoutY="411.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#215789" height="99.0" layoutX="90.0" layoutY="282.0" stroke="BLACK" strokeType="INSIDE" width="784.0" />
+            <TextField layoutX="225.0" layoutY="296.0" prefHeight="71.0" prefWidth="601.0" style="-fx-background-radius: 20;" />
+            <Button layoutX="128.0" layoutY="310.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="71.0" style="-fx-background-radius: 10;" text="Restart">
+               <font>
+                  <Font name="VNI-Briquet  Normal" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
