@@ -8,8 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="606.0" prefWidth="956.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18">
+<AnchorPane prefHeight="606.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainScreenController">
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
@@ -51,7 +50,7 @@
             <Button fx:id="D1" layoutX="89.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
             <Button fx:id="E1" layoutX="130.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
             <Button fx:id="F1" layoutX="173.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-            <Button fx:id="Gb1" layoutX="215.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="G1" layoutX="215.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
             <Button fx:id="A1" layoutX="256.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
             <Button fx:id="B1" layoutX="297.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
             <Button fx:id="C2" layoutX="337.0" layoutY="411.0" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
