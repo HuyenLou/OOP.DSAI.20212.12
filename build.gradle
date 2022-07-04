@@ -17,6 +17,17 @@ javafx {
     modules = ['javafx.controls', 'javafx.fxml']
 }
 
+sourceSets {
+    main {
+        java {
+            srcDir 'sourcecode'
+        }
+        resources {
+            srcDir 'resources'
+        }
+    }
+}
+
 mainClassName = 'main.App'
 
 run {
