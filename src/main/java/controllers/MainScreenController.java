@@ -5,14 +5,21 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import sound.PianoPlayer;
 import sound.Player;
 
 public class MainScreenController {
+    @FXML
+    private GridPane screenPane;
+    @FXML
+    private ImageView background;
     @FXML
     private Button C1;
     @FXML
@@ -92,6 +99,11 @@ public class MainScreenController {
 
     @FXML
     private void initialize() {
+        background.scaleXProperty().bind(Bindings.createDoubleBinding(() -> {
+                    return screenPane.getWidth() * 1.2 / 1000;
+                }, screenPane.widthProperty()));
+        background.fitHeightProperty().bind(screenPane.heightProperty());
+        
         buttonMap.put('q', C1);
         buttonMap.put('w', D1);
         buttonMap.put('e', E1);
