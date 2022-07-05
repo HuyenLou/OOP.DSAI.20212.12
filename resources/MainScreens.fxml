@@ -63,86 +63,89 @@
         <Insets left="570.0" />
       </GridPane.margin>
     </Button>
-    <Button fx:id="C1" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+    <Button fx:id="C1" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets right="800.0" />
+         </GridPane.margin></Button>
     <Button fx:id="D1" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
          <GridPane.margin>
-            <Insets left="80.0" />
-         </GridPane.margin></Button>
+            <Insets right="720.0" />
+         </GridPane.margin>
+      </Button>
     <Button fx:id="E1" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets left="160.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="F1" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets left="240.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="G1" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets left="320.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="A1" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets left="400.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="B1" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets left="480.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="C2" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets left="560.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="D2" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets left="640.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="E2" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets left="720.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="F2" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets left="800.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="G2" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets right="80.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="A2" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets right="160.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="B2" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets right="240.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="C3" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets right="320.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="D3" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets right="400.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="E3" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets right="480.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="F3" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets right="560.0" />
-         </GridPane.margin></Button>
-    <Button fx:id="G3" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
          <GridPane.margin>
             <Insets right="640.0" />
          </GridPane.margin></Button>
+    <Button fx:id="F1" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets right="560.0" />
+         </GridPane.margin>
+      </Button>
+    <Button fx:id="G1" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets right="480.0" />
+         </GridPane.margin></Button>
+    <Button fx:id="A1" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets right="400.0" />
+         </GridPane.margin></Button>
+    <Button fx:id="B1" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets right="320.0" />
+         </GridPane.margin></Button>
+    <Button fx:id="C2" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets right="240.0" />
+         </GridPane.margin></Button>
+    <Button fx:id="D2" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets right="160.0" />
+         </GridPane.margin>
+      </Button>
+    <Button fx:id="E2" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets right="80.0" />
+         </GridPane.margin></Button>
+    <Button fx:id="F2" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+    <Button fx:id="G2" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets left="80.0" />
+         </GridPane.margin></Button>
+    <Button fx:id="A2" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets left="160.0" />
+         </GridPane.margin></Button>
+    <Button fx:id="B2" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets left="240.0" />
+         </GridPane.margin></Button>
+    <Button fx:id="C3" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets left="320.0" />
+         </GridPane.margin></Button>
+    <Button fx:id="D3" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets left="400.0" />
+         </GridPane.margin></Button>
+    <Button fx:id="E3" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets left="480.0" />
+         </GridPane.margin></Button>
+    <Button fx:id="F3" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets left="560.0" />
+         </GridPane.margin></Button>
+    <Button fx:id="G3" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets left="640.0" />
+         </GridPane.margin></Button>
     <Button fx:id="A3" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
          <GridPane.margin>
-            <Insets right="720.0" />
+            <Insets left="720.0" />
          </GridPane.margin></Button>
     <Button fx:id="B3" mnemonicParsing="false" prefHeight="199.0" prefWidth="34.0" style="-fx-background-color: white; -fx-background-radius: 10;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
          <GridPane.margin>
-            <Insets right="800.0" />
+            <Insets left="800.0" />
          </GridPane.margin></Button>
     <Button fx:id="Db1" mnemonicParsing="false" prefHeight="119.0" prefWidth="27.0" style="-fx-background-color: black; -fx-background-radius: 9;" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
          <GridPane.margin>

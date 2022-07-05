@@ -104,95 +104,8 @@ public class MainScreenController {
                 }, screenPane.widthProperty()));
         background.fitHeightProperty().bind(screenPane.heightProperty());
         
-        buttonMap.put('q', C1);
-        buttonMap.put('w', D1);
-        buttonMap.put('e', E1);
-        buttonMap.put('r', F1);
-        buttonMap.put('t', G1);
-        buttonMap.put('y', A1);
-        buttonMap.put('u', B1);
-
-        buttonMap.put('a', C2);
-        buttonMap.put('s', D2);
-        buttonMap.put('d', E2);
-        buttonMap.put('f', F2);
-        buttonMap.put('g', G2);
-        buttonMap.put('h', A2);
-        buttonMap.put('j', B2);
-
-        buttonMap.put('z', C3);
-        buttonMap.put('x', D3);
-        buttonMap.put('c', E3);
-        buttonMap.put('v', F3);
-        buttonMap.put('b', G3);
-        buttonMap.put('n', A3);
-        buttonMap.put('m', B3);
-        
-        C1.setOnMousePressed(e -> {
-            player.playNote("C1");
-        });
-        D1.setOnMousePressed(e -> {
-            player.playNote("D1");
-        });
-        E1.setOnMousePressed(e -> {
-            player.playNote("E1");
-        });
-        F1.setOnMousePressed(e -> {
-            player.playNote("F1");
-        });
-        G1.setOnMousePressed(e -> {
-            player.playNote("G1");
-        });
-        A1.setOnMousePressed(e -> {
-            player.playNote("A1");
-        });
-        B1.setOnMousePressed(e -> {
-            player.playNote("B1");
-        });
-        
-        C2.setOnMousePressed(e -> {
-            player.playNote("C2");
-        });
-        D2.setOnMousePressed(e -> {
-            player.playNote("D2");
-        });
-        E2.setOnMousePressed(e -> {
-            player.playNote("E2");
-        });
-        F2.setOnMousePressed(e -> {
-            player.playNote("F2");
-        });
-        G2.setOnMousePressed(e -> {
-            player.playNote("G2");
-        });
-        A2.setOnMousePressed(e -> {
-            player.playNote("A2");
-        });
-        B2.setOnMousePressed(e -> {
-            player.playNote("B2");
-        });
-        
-        C3.setOnMousePressed(e -> {
-            player.playNote("C3");
-        });
-        D3.setOnMousePressed(e -> {
-            player.playNote("D3");
-        });
-        E3.setOnMousePressed(e -> {
-            player.playNote("E3");
-        });
-        F3.setOnMousePressed(e -> {
-            player.playNote("F3");
-        });
-        G3.setOnMousePressed(e -> {
-            player.playNote("G3");
-        });
-        A3.setOnMousePressed(e -> {
-            player.playNote("A3");
-        });
-        B3.setOnMousePressed(e -> {
-            player.playNote("B3");
-        });
+        setKeyMap();
+        setMouseEvent();
     }
 
     public void closePlayer() {
@@ -223,5 +136,144 @@ public class MainScreenController {
                                         false, false, false,
                                         false, false, false,
                                         false, null));
-    }    
+    }
+
+    private void setKeyMap() {
+        buttonMap.put('q', C1);
+        buttonMap.put('w', D1);
+        buttonMap.put('e', E1);
+        buttonMap.put('r', F1);
+        buttonMap.put('t', G1);
+        buttonMap.put('y', A1);
+        buttonMap.put('u', B1);
+
+        buttonMap.put('a', C2);
+        buttonMap.put('s', D2);
+        buttonMap.put('d', E2);
+        buttonMap.put('f', F2);
+        buttonMap.put('g', G2);
+        buttonMap.put('h', A2);
+        buttonMap.put('j', B2);
+
+        buttonMap.put('z', C3);
+        buttonMap.put('x', D3);
+        buttonMap.put('c', E3);
+        buttonMap.put('v', F3);
+        buttonMap.put('b', G3);
+        buttonMap.put('n', A3);
+        buttonMap.put('m', B3);
+    }
+
+    private void setMouseEvent() {
+        C1.setOnMousePressed(e -> {
+            player.playNote("C1");
+        });
+        Db1.setOnMousePressed(e -> {
+            player.playNote("Db1");
+        });
+        D1.setOnMousePressed(e -> {
+            player.playNote("D1");
+        });
+        Eb1.setOnMousePressed(e -> {
+            player.playNote("Eb1");
+        });
+        E1.setOnMousePressed(e -> {
+            player.playNote("E1");
+        });
+        F1.setOnMousePressed(e -> {
+            player.playNote("F1");
+        });
+        Gb1.setOnMousePressed(e -> {
+            player.playNote("Gb1");
+        });
+        G1.setOnMousePressed(e -> {
+            player.playNote("G1");
+        });
+        Ab1.setOnMousePressed(e -> {
+            player.playNote("Ab1");
+        });
+        A1.setOnMousePressed(e -> {
+            player.playNote("A1");
+        });
+        Bb1.setOnMousePressed(e -> {
+            player.playNote("Bb1");
+        });
+        B1.setOnMousePressed(e -> {
+            player.playNote("B1");
+        });
+        
+        C2.setOnMousePressed(e -> {
+            player.playNote("C2");
+        });
+        Db2.setOnMousePressed(e -> {
+            player.playNote("Db2");
+        });
+        D2.setOnMousePressed(e -> {
+            player.playNote("D2");
+        });
+        Eb2.setOnMousePressed(e -> {
+            player.playNote("Eb2");
+        });
+        E2.setOnMousePressed(e -> {
+            player.playNote("E2");
+        });
+        F2.setOnMousePressed(e -> {
+            player.playNote("F2");
+        });
+        Gb2.setOnMousePressed(e -> {
+            player.playNote("Gb2");
+        });
+        G2.setOnMousePressed(e -> {
+            player.playNote("G2");
+        });
+        Ab2.setOnMousePressed(e -> {
+            player.playNote("Ab2");
+        });
+        A2.setOnMousePressed(e -> {
+            player.playNote("A2");
+        });
+        Bb2.setOnMousePressed(e -> {
+            player.playNote("Bb2");
+        });
+        B2.setOnMousePressed(e -> {
+            player.playNote("B2");
+        });
+        
+        C3.setOnMousePressed(e -> {
+            player.playNote("C3");
+        });
+        Db3.setOnMousePressed(e -> {
+            player.playNote("Db3");
+        });
+        D3.setOnMousePressed(e -> {
+            player.playNote("D3");
+        });
+        Eb3.setOnMousePressed(e -> {
+            player.playNote("Eb3");
+        });
+        E3.setOnMousePressed(e -> {
+            player.playNote("E3");
+        });
+        F3.setOnMousePressed(e -> {
+            player.playNote("F3");
+        });
+        Gb3.setOnMousePressed(e -> {
+            player.playNote("Gb3");
+        });
+        G3.setOnMousePressed(e -> {
+            player.playNote("G3");
+        });
+        Ab3.setOnMousePressed(e -> {
+            player.playNote("Ab3");
+        });
+        A3.setOnMousePressed(e -> {
+            player.playNote("A3");
+        });
+        Bb3.setOnMousePressed(e -> {
+            player.playNote("Bb3");
+        });
+        B3.setOnMousePressed(e -> {
+            player.playNote("B3");
+        });
+    }
 }
