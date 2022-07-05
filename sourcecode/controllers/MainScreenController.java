@@ -140,27 +140,42 @@ public class MainScreenController {
 
     private void setKeyMap() {
         buttonMap.put('q', C1);
+        buttonMap.put('W', Db1);
         buttonMap.put('w', D1);
+        buttonMap.put('E', Eb1);
         buttonMap.put('e', E1);
         buttonMap.put('r', F1);
+        buttonMap.put('T', Gb1);
         buttonMap.put('t', G1);
+        buttonMap.put('Y', Ab1);
         buttonMap.put('y', A1);
+        buttonMap.put('U', Bb1);
         buttonMap.put('u', B1);
 
         buttonMap.put('a', C2);
+        buttonMap.put('S', Db2);
         buttonMap.put('s', D2);
+        buttonMap.put('D', Eb2);
         buttonMap.put('d', E2);
         buttonMap.put('f', F2);
+        buttonMap.put('G', Gb2);
         buttonMap.put('g', G2);
+        buttonMap.put('H', Ab2);
         buttonMap.put('h', A2);
+        buttonMap.put('J', Bb2);
         buttonMap.put('j', B2);
 
         buttonMap.put('z', C3);
+        buttonMap.put('X', Db3);
         buttonMap.put('x', D3);
+        buttonMap.put('C', Eb3);
         buttonMap.put('c', E3);
         buttonMap.put('v', F3);
+        buttonMap.put('B', Gb3);
         buttonMap.put('b', G3);
+        buttonMap.put('N', Ab3);
         buttonMap.put('n', A3);
+        buttonMap.put('M', Bb3);
         buttonMap.put('m', B3);
     }
 
