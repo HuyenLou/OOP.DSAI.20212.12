@@ -6,14 +6,17 @@ import java.util.Map;
 import java.util.Set;
 
 import javafx.beans.binding.Bindings;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import sound.PianoPlayer;
 import sound.Player;
+import sound.Recorder;
 
 public class MainScreenController {
     @FXML
@@ -96,6 +99,7 @@ public class MainScreenController {
     private Map<Character, Button> buttonMap = new HashMap<>();
     private Set<Character> inUse = new HashSet<>();
     private Player player = new PianoPlayer();
+    private String song= "";
 
     @FXML
     private void initialize() {
@@ -180,115 +184,220 @@ public class MainScreenController {
     }
 
     private void setMouseEvent() {
-        C1.setOnMousePressed(e -> {
-            player.playNote("C1");
+    	 C1.setOnMousePressed(e -> {
+         	song = song+"C1 ";
+         	NotePlayed.setText(song);
+             player.playNote("C1 ");
+
         });
         Db1.setOnMousePressed(e -> {
-            player.playNote("Db1");
+         	song = song+"Db1 ";
+         	NotePlayed.setText(song);
+             player.playNote("Db1 ");
         });
         D1.setOnMousePressed(e -> {
-            player.playNote("D1");
+         	song = song+"D1 ";
+         	NotePlayed.setText(song);
+             player.playNote("D1 ");
         });
         Eb1.setOnMousePressed(e -> {
-            player.playNote("Eb1");
+         	song = song+"Eb1 ";
+         	NotePlayed.setText(song);
+             player.playNote("Eb1 ");
         });
         E1.setOnMousePressed(e -> {
-            player.playNote("E1");
+         	song = song+"E1 ";
+         	NotePlayed.setText(song);
+             player.playNote("E1 ");
         });
         F1.setOnMousePressed(e -> {
-            player.playNote("F1");
+         	song = song+"F1 ";
+         	NotePlayed.setText(song);
+             player.playNote("F1 ");
         });
         Gb1.setOnMousePressed(e -> {
-            player.playNote("Gb1");
+         	song = song+"Gb1 ";
+         	NotePlayed.setText(song);
+             player.playNote("Gb1 ");
         });
         G1.setOnMousePressed(e -> {
-            player.playNote("G1");
+         	song = song+"G1 ";
+         	NotePlayed.setText(song);
+             player.playNote("G1 ");
         });
         Ab1.setOnMousePressed(e -> {
-            player.playNote("Ab1");
+         	song = song+"Ab1 ";
+         	NotePlayed.setText(song);
+             player.playNote("Ab1 ");
         });
         A1.setOnMousePressed(e -> {
-            player.playNote("A1");
+         	song = song+"A1 ";
+         	NotePlayed.setText(song);
+             player.playNote("A1 ");
         });
         Bb1.setOnMousePressed(e -> {
-            player.playNote("Bb1");
+         	song = song+"Bb1 ";
+         	NotePlayed.setText(song);
+             player.playNote("Bb1 ");
         });
         B1.setOnMousePressed(e -> {
-            player.playNote("B1");
+         	song = song+"B1 ";
+         	NotePlayed.setText(song);
+             player.playNote("B1 ");
         });
         
         C2.setOnMousePressed(e -> {
-            player.playNote("C2");
+         	song = song+"C2 ";
+         	NotePlayed.setText(song);
+             player.playNote("C2 ");
         });
         Db2.setOnMousePressed(e -> {
-            player.playNote("Db2");
+         	song = song+"Db2 ";
+         	NotePlayed.setText(song);
+             player.playNote("Db2 ");
         });
         D2.setOnMousePressed(e -> {
-            player.playNote("D2");
+         	song = song+"D2 ";
+         	NotePlayed.setText(song);
+             player.playNote("D2 ");
         });
         Eb2.setOnMousePressed(e -> {
-            player.playNote("Eb2");
+         	song = song+"Eb1 ";
+         	NotePlayed.setText(song);
+             player.playNote("Eb1 ");
         });
         E2.setOnMousePressed(e -> {
-            player.playNote("E2");
+         	song = song+"E1 ";
+         	NotePlayed.setText(song);
+             player.playNote("E1 ");
         });
         F2.setOnMousePressed(e -> {
-            player.playNote("F2");
+         	song = song+"F1 ";
+         	NotePlayed.setText(song);
+             player.playNote("F1 ");
         });
         Gb2.setOnMousePressed(e -> {
-            player.playNote("Gb2");
+         	song = song+"Gb1 ";
+         	NotePlayed.setText(song);
+             player.playNote("Gb1 ");
         });
         G2.setOnMousePressed(e -> {
-            player.playNote("G2");
+         	song = song+"G2 ";
+         	NotePlayed.setText(song);
+             player.playNote("G2 ");
         });
         Ab2.setOnMousePressed(e -> {
-            player.playNote("Ab2");
+         	song = song+"Ab2 ";
+         	NotePlayed.setText(song);
+             player.playNote("Ab2 ");
         });
         A2.setOnMousePressed(e -> {
-            player.playNote("A2");
+         	song = song+"A2 ";
+         	NotePlayed.setText(song);
+             player.playNote("A2 ");
         });
         Bb2.setOnMousePressed(e -> {
-            player.playNote("Bb2");
+         	song = song+"Bb1 ";
+         	NotePlayed.setText(song);
+             player.playNote("Bb1 ");
         });
         B2.setOnMousePressed(e -> {
-            player.playNote("B2");
+         	song = song+"B2 ";
+         	NotePlayed.setText(song);
+             player.playNote("B2 ");
         });
         
         C3.setOnMousePressed(e -> {
-            player.playNote("C3");
+         	song = song+"C3 ";
+         	NotePlayed.setText(song);
+             player.playNote("C3 ");
         });
         Db3.setOnMousePressed(e -> {
-            player.playNote("Db3");
+         	song = song+"Db3 ";
+         	NotePlayed.setText(song);
+             player.playNote("Db3 ");
         });
         D3.setOnMousePressed(e -> {
-            player.playNote("D3");
+         	song = song+"D3 ";
+         	NotePlayed.setText(song);
+             player.playNote("D3 ");
         });
         Eb3.setOnMousePressed(e -> {
-            player.playNote("Eb3");
+         	song = song+"Eb3 ";
+         	NotePlayed.setText(song);
+             player.playNote("Eb3 ");
         });
         E3.setOnMousePressed(e -> {
-            player.playNote("E3");
+         	song = song+"E3 ";
+         	NotePlayed.setText(song);
+             player.playNote("E3 ");
         });
         F3.setOnMousePressed(e -> {
-            player.playNote("F3");
+         	song = song+"F3 ";
+         	NotePlayed.setText(song);
+             player.playNote("F3 ");
         });
         Gb3.setOnMousePressed(e -> {
-            player.playNote("Gb3");
+         	song = song+"Gb3 ";
+         	NotePlayed.setText(song);
+             player.playNote("Gb3 ");
         });
         G3.setOnMousePressed(e -> {
-            player.playNote("G3");
+         	song = song+"G3 ";
+         	NotePlayed.setText(song);
+             player.playNote("G3 ");
         });
         Ab3.setOnMousePressed(e -> {
-            player.playNote("Ab3");
+         	song = song+"Ab3 ";
+         	NotePlayed.setText(song);
+             player.playNote("Ab3 ");
         });
         A3.setOnMousePressed(e -> {
-            player.playNote("A3");
+         	song = song+"A3 ";
+         	NotePlayed.setText(song);
+             player.playNote("A3 ");
         });
         Bb3.setOnMousePressed(e -> {
-            player.playNote("Bb3");
+         	song = song+"Bb13 ";
+         	NotePlayed.setText(song);
+             player.playNote("Bb3 ");
         });
         B3.setOnMousePressed(e -> {
-            player.playNote("B3");
+         	song = song+"B3 ";
+         	NotePlayed.setText(song);
+             player.playNote("B3 ");
         });
     }
+    Recorder recorder = new Recorder();
+    @FXML
+    void startRecord(ActionEvent event) {
+    	recorder.begin();
+
+    }
+
+    @FXML
+    void finishRecord(ActionEvent event) {
+    	recorder.finish();
+
+    }
+    @FXML
+    void playRecord(ActionEvent event) {
+    	recorder.play();
+    }
+    @FXML
+    private TextField NotePlayed;
+    @FXML
+    private Button replayButton;
+    @FXML
+    void startReplay(ActionEvent event) {
+
+    }
+    
+    @FXML
+    void clear(ActionEvent event) {
+    	
+
+    }
+
 }
+
