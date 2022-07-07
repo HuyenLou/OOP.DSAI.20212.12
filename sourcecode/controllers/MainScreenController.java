@@ -99,10 +99,30 @@ public class MainScreenController {
     private Map<Character, Button> buttonMap = new HashMap<>();
     private Set<Character> inUse = new HashSet<>();
     private Player player = new PianoPlayer();
-    private String song= "";
-
+    private static String song= "";
     @FXML
     private void initialize() {
+//    	Thread stopper = new Thread(new Runnable() {
+//	        public void run() {
+//	        	while (true){
+//	        		
+//	        		try {
+//						Thread.sleep(1);
+//					} catch (InterruptedException e) {
+//						// TODO Auto-generated catch block
+//						e.printStackTrace();
+//					}
+//	        		if (song.length()>90) {
+//	        			NotePlayed.setText(song.substring(song.length()-40, song.length()));
+//	        		}
+//	        		else {
+//	        			NotePlayed.setText(song);
+//	        		}
+//	        		
+//	        	}
+//	        }
+//	    });
+//	    stopper.start();
         background.scaleXProperty().bind(Bindings.createDoubleBinding(() -> {
                     return screenPane.getWidth() * 1.2 / 1000;
                 }, screenPane.widthProperty()));
@@ -182,189 +202,198 @@ public class MainScreenController {
         buttonMap.put('M', Bb3);
         buttonMap.put('m', B3);
     }
+    
+    private String reduceLyric(String song) {
+    	if (song.length()<90) {
+    		return song;
+    	}
+    	else {
+    		return song.substring(song.length()-90, song.length());
+    	}
+    }
 
     private void setMouseEvent() {
     	 C1.setOnMousePressed(e -> {
          	song = song+"C1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("C1 ");
 
         });
         Db1.setOnMousePressed(e -> {
          	song = song+"Db1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("Db1 ");
         });
         D1.setOnMousePressed(e -> {
          	song = song+"D1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("D1 ");
         });
         Eb1.setOnMousePressed(e -> {
          	song = song+"Eb1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("Eb1 ");
         });
         E1.setOnMousePressed(e -> {
          	song = song+"E1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("E1 ");
         });
         F1.setOnMousePressed(e -> {
          	song = song+"F1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("F1 ");
         });
         Gb1.setOnMousePressed(e -> {
          	song = song+"Gb1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("Gb1 ");
         });
         G1.setOnMousePressed(e -> {
          	song = song+"G1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("G1 ");
         });
         Ab1.setOnMousePressed(e -> {
          	song = song+"Ab1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("Ab1 ");
         });
         A1.setOnMousePressed(e -> {
          	song = song+"A1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("A1 ");
         });
         Bb1.setOnMousePressed(e -> {
          	song = song+"Bb1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("Bb1 ");
         });
         B1.setOnMousePressed(e -> {
          	song = song+"B1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("B1 ");
         });
         
         C2.setOnMousePressed(e -> {
          	song = song+"C2 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("C2 ");
         });
         Db2.setOnMousePressed(e -> {
          	song = song+"Db2 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("Db2 ");
         });
         D2.setOnMousePressed(e -> {
          	song = song+"D2 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("D2 ");
         });
         Eb2.setOnMousePressed(e -> {
          	song = song+"Eb1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("Eb1 ");
         });
         E2.setOnMousePressed(e -> {
          	song = song+"E1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("E1 ");
         });
         F2.setOnMousePressed(e -> {
          	song = song+"F1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("F1 ");
         });
         Gb2.setOnMousePressed(e -> {
          	song = song+"Gb1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("Gb1 ");
         });
         G2.setOnMousePressed(e -> {
          	song = song+"G2 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("G2 ");
         });
         Ab2.setOnMousePressed(e -> {
          	song = song+"Ab2 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("Ab2 ");
         });
         A2.setOnMousePressed(e -> {
          	song = song+"A2 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("A2 ");
         });
         Bb2.setOnMousePressed(e -> {
          	song = song+"Bb1 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("Bb1 ");
         });
         B2.setOnMousePressed(e -> {
          	song = song+"B2 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("B2 ");
         });
         
         C3.setOnMousePressed(e -> {
          	song = song+"C3 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("C3 ");
         });
         Db3.setOnMousePressed(e -> {
          	song = song+"Db3 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("Db3 ");
         });
         D3.setOnMousePressed(e -> {
          	song = song+"D3 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("D3 ");
         });
         Eb3.setOnMousePressed(e -> {
          	song = song+"Eb3 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("Eb3 ");
         });
         E3.setOnMousePressed(e -> {
          	song = song+"E3 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("E3 ");
         });
         F3.setOnMousePressed(e -> {
          	song = song+"F3 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("F3 ");
         });
         Gb3.setOnMousePressed(e -> {
          	song = song+"Gb3 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("Gb3 ");
         });
         G3.setOnMousePressed(e -> {
          	song = song+"G3 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("G3 ");
         });
         Ab3.setOnMousePressed(e -> {
          	song = song+"Ab3 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("Ab3 ");
         });
         A3.setOnMousePressed(e -> {
          	song = song+"A3 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("A3 ");
         });
         Bb3.setOnMousePressed(e -> {
          	song = song+"Bb13 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("Bb3 ");
         });
         B3.setOnMousePressed(e -> {
          	song = song+"B3 ";
-         	NotePlayed.setText(song);
+         	NotePlayed.setText(reduceLyric(song));
              player.playNote("B3 ");
         });
     }
@@ -390,7 +419,7 @@ public class MainScreenController {
     private Button replayButton;
     @FXML
     void startReplay(ActionEvent event) {
-
+    	player.playNote(song);
     }
     
     @FXML
