@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane alignment="BOTTOM_CENTER" prefHeight="790.0" prefWidth="1530.0" styleClass="stack-pane" stylesheets="@../../resources/effec.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="141.0" prefWidth="554.0" text="Virtual Piano" textFill="#f7f4f4">
+               <font>
+                  <Font name="VNI-Briquet  Normal" size="60.0" />
+               </font>
+               <padding>
+                  <Insets left="150.0" top="40.0" />
+               </padding>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="141.0" prefWidth="1390.0" text="Group 12" textFill="#f7f4f4">
+               <font>
+                  <Font name="VNI-Briquet  Normal" size="60.0" />
+               </font>
+               <padding>
+                  <Insets left="1115.0" top="40.0" />
+               </padding>
+            </Label>
+         </children>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </Pane>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1530.0" styleClass="background" stylesheets="@../../resources/effec.css">
+         <children>
+            <TilePane alignment="CENTER" hgap="100.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnRecord" alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#btnRecordPressed" prefHeight="86.0" prefWidth="144.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Record" textFill="#f1f2f7">
+                     <font>
+                        <Font name="VNI-Briquet  Normal" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/icons8-microphone-30.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnMenuHelp" alignment="BASELINE_CENTER" layoutX="708.0" layoutY="117.0" mnemonicParsing="false" onAction="#btnMenuHelpPressed" prefHeight="86.0" prefWidth="158.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Help Menu" textFill="#f1f2f7">
+                     <font>
+                        <Font name="VNI-Briquet  Normal" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/icons8-help-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnVolume" alignment="BASELINE_CENTER" layoutX="791.0" layoutY="117.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="156.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Volume" textFill="#f1f2f7">
+                     <font>
+                        <Font name="VNI-Briquet  Normal" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/icons8-audio-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnStyle" alignment="BASELINE_CENTER" layoutX="708.0" layoutY="117.0" mnemonicParsing="false" onAction="#btnStylePressed" prefHeight="86.0" prefWidth="159.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Style" textFill="#f1f2f7">
+                     <font>
+                        <Font name="VNI-Briquet  Normal" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="44.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/icons8-music-folder-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnExit" alignment="BASELINE_CENTER" layoutX="1084.0" layoutY="190.0" mnemonicParsing="false" onAction="#btnExitPressed" prefHeight="86.0" prefWidth="159.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Exit" textFill="#f1f2f7">
+                     <font>
+                        <Font name="VNI-Briquet  Normal" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="44.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/icons8-close-30.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="180.0" />
+               </padding>
+            </TilePane>
+            <Pane prefHeight="100.0" prefWidth="300.0">
+               <children>
+                  <Rectangle fx:id="changeVolume" arcHeight="5.0" arcWidth="5.0" fill="#03213b" height="48.0" layoutX="772.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="248.0" />
+                  <Slider layoutX="787.0" layoutY="28.0" prefHeight="14.0" prefWidth="220.0" />
+               </children>
+            </Pane>
+            <AnchorPane prefHeight="269.0" prefWidth="883.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#04182b" height="350.0" layoutX="-9.0" layoutY="-124.0" stroke="BLACK" strokeType="INSIDE" width="1190.0" />
+                  <Button fx:id="C1" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="D1" layoutX="42.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="E1" layoutX="84.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="F1" layoutX="126.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="G1" layoutX="168.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="A1" layoutX="210.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="B1" alignment="TOP_LEFT" layoutX="252.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="C2" layoutX="294.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="D2" layoutX="336.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="E2" layoutX="378.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="F2" layoutX="420.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="G2" layoutX="462.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="A2" layoutX="504.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="B2" layoutX="546.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="C3" layoutX="588.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="D3" layoutX="630.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="E3" layoutX="672.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="F3" layoutX="714.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="G3" layoutX="756.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="A3" layoutX="798.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="B3" layoutX="840.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="Db1" layoutX="24.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Eb1" layoutX="68.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Gb1" layoutX="151.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Ab1" layoutX="196.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Bb1" layoutX="238.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Db2" layoutX="322.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Eb2" layoutX="364.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Gb2" layoutX="448.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Ab2" layoutX="490.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Bb2" layoutX="530.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Db3" layoutX="616.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Eb3" layoutX="656.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Gb3" layoutX="742.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Ab3" layoutX="784.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Bb3" layoutX="825.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <TextField layoutX="287.0" layoutY="-106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="71.0" prefWidth="601.0" style="-fx-background-radius: 20;" />
+                  <Button fx:id="btnReplay" layoutX="120.0" layoutY="-100.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="136.0" style="-fx-background-color: transpare; -fx-border-color: white; -fx-border-width: 5;" text="Replay" textFill="#faf5f5">
+                     <font>
+                        <Font name="VNI-Briquet  Normal" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/icons8-rotate-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="C4" layoutX="882.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="D4" layoutX="924.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="E4" layoutX="966.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="F4" layoutX="1008.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="G4" layoutX="1050.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="A4" layoutX="1092.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="A5" layoutX="1134.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="Db4" layoutX="909.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Eb4" layoutX="951.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Gb4" layoutX="1035.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Ab4" layoutX="1075.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="Bb4" layoutX="1119.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
+                  <Button fx:id="btnClear" layoutX="918.0" layoutY="-103.0" mnemonicParsing="false" onAction="#btnClearPressed" prefHeight="58.0" prefWidth="136.0" style="-fx-background-color: transpare; -fx-border-color: white; -fx-border-width: 5;" text="Clear" textFill="#faf5f5">
+                     <font>
+                        <Font name="VNI-Briquet  Normal" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/images/icons8-empty-trash-30.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="24.0" layoutY="-85.0" pickOnBounds="true" preserveRatio="true" rotate="2.1">
+                     <image>
+                        <Image url="@../../resources/images/icons8-musical-notes-24%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="67.0" layoutY="-85.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/icons8-musical-notes-50.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="42.0" fitWidth="40.0" layoutX="1099.0" layoutY="-91.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/icons8-musical-notes-64%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets left="182.0" right="440.0" top="130.0" />
+               </VBox.margin>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</StackPane>
