@@ -26,7 +26,7 @@
             </Button>
             <Button alignment="BASELINE_CENTER" mnemonicParsing="false" prefHeight="86.0" prefWidth="144.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Guitar" textFill="#f1f2f7">
                <font>
-                  <Font name="VNI-Briquet  Normal" size="16.0" />
+                  <Font name="VNI-Briquet  Normal"  size="16.0" />
                </font>
                <graphic>
                   <ImageView fitHeight="28.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
