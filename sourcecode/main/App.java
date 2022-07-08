@@ -15,17 +15,17 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/MainScreens.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("MainScreens.fxml"));
         Parent root = loader.load();
         MainScreenController controller = loader.getController();
-        Scene scene = new Scene(root, 956, 606);
+        Scene scene = new Scene(root, 1530, 790);
 
         scene.addEventFilter(KeyEvent.KEY_PRESSED, e -> {
             char c = (char)(32 + e.getCode().getChar().charAt(0));
             if (e.isShiftDown()) {
                 c -= 32;
             }
-            controller.pressNote(c);
+            // controller.pressNote(c);
             e.consume();
         });
         scene.addEventFilter(KeyEvent.KEY_RELEASED, e -> {
@@ -33,12 +33,12 @@ public class App extends Application {
             if (e.isShiftDown()) {
                 c -= 32;
             }
-            controller.releaseNote(c);
+            // controller.releaseNote(c);
             e.consume();
         });
         
         stage.setOnCloseRequest(e -> {
-            controller.closePlayer();
+            // controller.closePlayer();
         });
         stage.setTitle("Virtual piano");
         stage.setScene(scene);
