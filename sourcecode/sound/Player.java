@@ -43,9 +43,9 @@ public abstract class Player {
         jfPlayer.startNote(new Note(note));
     }
 
-    public void setVolume(byte volume) {
-        this.volume = volume;
-        jfPlayer.changeController((byte)7, volume);
+    public void setVolume(float volume) {
+        this.volume = (byte) (volume * 127 / 100);
+        jfPlayer.changeController((byte)7, this.volume);
     }
 
     public byte getVolume() {
