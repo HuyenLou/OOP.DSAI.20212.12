@@ -9,6 +9,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 
+
 import java.net.URL;
 
 import controllers.*;
@@ -39,6 +40,7 @@ public class App extends Application {
         scene.addEventFilter(MouseEvent.MOUSE_RELEASED, e -> {
             controller.hideVolumeController();
         });
+
         stage.setOnCloseRequest(e -> {
             controller.closePlayer();
         });
