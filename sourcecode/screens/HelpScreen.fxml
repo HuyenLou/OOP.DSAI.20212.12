@@ -7,12 +7,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="588.0" styleClass="stack-pane2" stylesheets="@../../resources/effec.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="588.0" style="-fx-background-color: #6674bf;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox prefHeight="655.0" prefWidth="562.0">
          <children>
-            <Label alignment="CENTER" text="Instructions" textFill="#faf6f6">
+            <Label alignment="CENTER" text="Instructions" textFill="#f7f7fa">
                <font>
                   <Font name=".VnCooper Medium" size="37.0" />
                </font>
@@ -23,7 +22,10 @@
                   <Insets bottom="20.0" />
                </VBox.margin>
             </Label>
-            <TextArea fx:id="helpText" prefHeight="417.0" prefWidth="588.0" />
+            <TextArea fx:id="helpText" prefHeight="582.0" prefWidth="588.0" style="-fx-border-color: Blue;" wrapText="true">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font></TextArea>
          </children>
          <opaqueInsets>
             <Insets />
