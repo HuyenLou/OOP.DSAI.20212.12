@@ -1,4 +1,3 @@
-
 package sound;
 
 import java.io.File;
@@ -16,7 +15,7 @@ import javax.sound.sampled.TargetDataLine;
 
 public class Recorder {
 
-			String file_path="/OOP.DSAI.20212.12/src/main/resources/audio/RecordAudio.wav";
+			String file_path="/OOP.DSAI.20212.12/resources/audio/RecordAudio.wav";
 			File wavFile = new File(file_path);
 			
 
