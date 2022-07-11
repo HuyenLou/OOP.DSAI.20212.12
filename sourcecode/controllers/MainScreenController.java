@@ -17,6 +17,8 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
 import javafx.stage.Stage;
@@ -148,6 +150,15 @@ public class MainScreenController {
         btnVolume.setOnAction(e -> {
             volumePane.setVisible(!volumePane.isVisible());
         });
+        btnStyles.setOnAction(e -> {
+            OptionStyles.setVisible(!volumePane.isVisible());
+        });
+        OptionStyles.setVisible(false);
+        btnStyles.setOnAction(e -> {
+            OptionStyles.setVisible(!OptionStyles.isVisible());
+        });
+        volumeSlider.setValue(75.0);
+        
         btnStyles.setOnAction(e -> {
             OptionStyles.setVisible(!volumePane.isVisible());
         });
