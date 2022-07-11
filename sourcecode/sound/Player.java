@@ -5,7 +5,7 @@ import org.jfugue.theory.Note;
 
 public abstract class Player {
     protected RealtimePlayer jfPlayer;
-    protected byte volume;
+    private byte volume;
 
     public Player() {
         try {
