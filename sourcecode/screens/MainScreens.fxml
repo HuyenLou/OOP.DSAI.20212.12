@@ -8,6 +8,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.TilePane?>
@@ -56,7 +57,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnStyle" alignment="BASELINE_CENTER" layoutX="708.0" layoutY="117.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="159.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Style" textFill="#f1f2f7">
+                  <Button fx:id="btnStyles" alignment="BASELINE_CENTER" layoutX="708.0" layoutY="117.0" mnemonicParsing="false" onAction="#btnStylesPressed" prefHeight="86.0" prefWidth="159.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Styles" textFill="#f1f2f7">
                      <font>
                         <Font name="VNI-Briquet  Normal" size="16.0" />
                      </font>
@@ -109,10 +110,54 @@
                   <Insets top="150.0" />
                </padding>
             </TilePane>
-            <Pane fx:id="volumePane" prefHeight="100.0" prefWidth="300.0">
+            <Pane prefHeight="100.0" prefWidth="300.0">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03213b" height="48.0" layoutX="641.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="248.0" />
-                  <Slider fx:id="volumeSlider" layoutX="655.0" layoutY="35.0" prefHeight="14.0" prefWidth="220.0" />
+                  <AnchorPane fx:id="volumePane" layoutX="648.0" layoutY="14.0" prefHeight="71.0" prefWidth="242.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03213b" height="48.0" stroke="BLACK" strokeType="INSIDE" width="242.0" />
+                        <Slider fx:id="volumeSlider" layoutX="11.0" layoutY="17.0" prefHeight="14.0" prefWidth="220.0" />
+                     </children>
+                  </AnchorPane>
+                  <HBox fx:id="OptionStyles" layoutX="303.0" layoutY="14.0" prefHeight="58.0" prefWidth="338.0">
+                     <children>
+                        <Button fx:id="btnPiano" alignment="BASELINE_CENTER" mnemonicParsing="false" prefHeight="86.0" prefWidth="144.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Piano" textFill="#f1f2f7">
+                           <font>
+                              <Font name="VNI-Briquet  Normal" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/images/piano.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnGuitar" alignment="BASELINE_CENTER" mnemonicParsing="false" prefHeight="86.0" prefWidth="144.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Guitar" textFill="#f1f2f7">
+                           <font>
+                              <Font name="VNI-Briquet  Normal" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/images/guitar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnOrgan" alignment="BASELINE_CENTER" mnemonicParsing="false" prefHeight="86.0" prefWidth="144.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Organ" textFill="#f1f2f7">
+                           <font>
+                              <Font name="VNI-Briquet  Normal" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/images/organ.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
                </children>
             </Pane>
             <AnchorPane prefHeight="269.0" prefWidth="883.0">

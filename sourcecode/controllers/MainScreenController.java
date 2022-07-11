@@ -15,6 +15,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
 import javafx.stage.Stage;
@@ -122,9 +124,13 @@ public class MainScreenController {
     @FXML
     private Button btnVolume;
     @FXML
-    private Pane volumePane;
+    private AnchorPane volumePane;
     @FXML
     private Slider volumeSlider;
+    @FXML
+    private HBox OptionStyles;
+    @FXML
+    private Button btnStyles;
 
     private Map<Character, Button> buttonMap = new HashMap<>();
     private Set<Character> inUse = new HashSet<>();
@@ -139,10 +145,16 @@ public class MainScreenController {
             volumePane.setVisible(!volumePane.isVisible());
         });
         volumePane.setVisible(false);
-        volumeSlider.valueProperty().addListener((o, oldValue, newValue) -> {
-            player.setVolume(newValue.floatValue());
+        btnVolume.setOnAction(e -> {
+            volumePane.setVisible(!volumePane.isVisible());
         });
-        volumeSlider.setValue(75.0);
+        btnStyles.setOnAction(e -> {
+            OptionStyles.setVisible(!volumePane.isVisible());
+        });
+        OptionStyles.setVisible(false);
+        btnStyles.setOnAction(e -> {
+            OptionStyles.setVisible(!OptionStyles.isVisible());
+        });
     }
 
     public void hideVolumeController() {
@@ -396,5 +408,9 @@ public class MainScreenController {
 			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			stage.close();
 		}
+    }
+    @FXML
+    void btnStylesPressed(ActionEvent event) {
+    	OptionStyles.setVisible(true);
     }
 }
