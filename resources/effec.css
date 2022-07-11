@@ -4,6 +4,6 @@
 }
 
 .stack-pane2 {
-  -fx-background-image: url('images/i3.jpeg');
+  -fx-background-image: url('resources/images/i3.jpeg');
   -fx-background-size: cover;
 }

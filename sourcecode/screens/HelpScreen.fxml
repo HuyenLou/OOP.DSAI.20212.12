@@ -10,7 +10,7 @@
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="588.0" styleClass="stack-pane2" stylesheets="@../../resources/effec.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox prefHeight="655.0" prefWidth="562.0">
+      <VBox prefHeight="655.0" prefWidth="562.0" styleClass="stack-pane" stylesheets="@../../resources/effec.css">
          <children>
             <Label alignment="CENTER" text="Instructions" textFill="#faf6f6">
                <font>

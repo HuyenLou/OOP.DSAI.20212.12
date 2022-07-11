@@ -21,7 +21,7 @@ public class HelpScreenController {
 
 	public HelpScreenController() {
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("sourcecode/screens/helptext.txt"));
+			BufferedReader br = new BufferedReader(new FileReader("/screens/helptext.txt"));
 
 			while ((line = br.readLine()) != null) {
 				helpText.appendText(line);

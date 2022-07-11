@@ -10,8 +10,6 @@ import javafx.stage.Stage;
 
 
 
-import java.net.URL;
-
 import controllers.*;
 
 public class App extends Application {
