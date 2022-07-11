@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<StackPane alignment="BOTTOM_CENTER" prefHeight="790.0" prefWidth="1530.0" styleClass="stack-pane" stylesheets="@../../resources/effec.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane alignment="BOTTOM_CENTER" prefHeight="790.0" prefWidth="1530.0" styleClass="stack-pane" stylesheets="@effec.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainScreenController">
    <children>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -40,30 +40,30 @@
             <Insets />
          </StackPane.margin>
       </Pane>
-      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1530.0" styleClass="background" stylesheets="@../../resources/effec.css">
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1530.0" styleClass="background" stylesheets="@effec.css">
          <children>
             <TilePane alignment="CENTER" hgap="100.0" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="btnRecord" alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#btnRecordPressed" prefHeight="86.0" prefWidth="144.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Record" textFill="#f1f2f7">
+                  <Button fx:id="btnRecord" alignment="BASELINE_CENTER" mnemonicParsing="false" prefHeight="86.0" prefWidth="144.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Record" textFill="#f1f2f7">
                      <font>
                         <Font name="VNI-Briquet  Normal" size="16.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="28.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../resources/images/icons8-microphone-30.png" />
+                              <Image url="@images/icons8-microphone-30.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnMenuHelp" alignment="BASELINE_CENTER" layoutX="708.0" layoutY="117.0" mnemonicParsing="false" onAction="#btnMenuHelpPressed" prefHeight="86.0" prefWidth="158.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Help Menu" textFill="#f1f2f7">
+                  <Button fx:id="btnMenuHelp" alignment="BASELINE_CENTER" layoutX="708.0" layoutY="117.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="158.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Help Menu" textFill="#f1f2f7">
                      <font>
                         <Font name="VNI-Briquet  Normal" size="16.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../resources/images/icons8-help-24.png" />
+                              <Image url="@images/icons8-help-24.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -75,31 +75,31 @@
                      <graphic>
                         <ImageView fitHeight="36.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../resources/images/icons8-audio-24.png" />
+                              <Image url="@images/icons8-audio-24.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnStyle" alignment="BASELINE_CENTER" layoutX="708.0" layoutY="117.0" mnemonicParsing="false" onAction="#btnStylePressed" prefHeight="86.0" prefWidth="159.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Style" textFill="#f1f2f7">
+                  <Button fx:id="btnStyle" alignment="BASELINE_CENTER" layoutX="708.0" layoutY="117.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="159.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Style" textFill="#f1f2f7">
                      <font>
                         <Font name="VNI-Briquet  Normal" size="16.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="44.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../resources/images/icons8-music-folder-50.png" />
+                              <Image url="@images/icons8-music-folder-50.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnExit" alignment="BASELINE_CENTER" layoutX="1084.0" layoutY="190.0" mnemonicParsing="false" onAction="#btnExitPressed" prefHeight="86.0" prefWidth="159.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Exit" textFill="#f1f2f7">
+                  <Button fx:id="btnExit" alignment="BASELINE_CENTER" layoutX="1084.0" layoutY="190.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="159.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Exit" textFill="#f1f2f7">
                      <font>
                         <Font name="VNI-Briquet  Normal" size="16.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="44.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../resources/images/icons8-close-30.png" />
+                              <Image url="@images/icons8-close-30.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -109,10 +109,10 @@
                   <Insets top="180.0" />
                </padding>
             </TilePane>
-            <Pane prefHeight="100.0" prefWidth="300.0">
+            <Pane fx:id="volumePane" prefHeight="100.0" prefWidth="300.0">
                <children>
-                  <Rectangle fx:id="changeVolume" arcHeight="5.0" arcWidth="5.0" fill="#03213b" height="48.0" layoutX="772.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="248.0" />
-                  <Slider layoutX="787.0" layoutY="28.0" prefHeight="14.0" prefWidth="220.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03213b" height="48.0" layoutX="641.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="248.0" />
+                  <Slider fx:id="volumeSlider" layoutX="655.0" layoutY="35.0" prefHeight="14.0" prefWidth="220.0" />
                </children>
             </Pane>
             <AnchorPane prefHeight="269.0" prefWidth="883.0">
@@ -162,7 +162,7 @@
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../resources/images/icons8-rotate-24.png" />
+                              <Image url="@images/icons8-rotate-24.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -173,37 +173,37 @@
                   <Button fx:id="F4" layoutX="1008.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
                   <Button fx:id="G4" layoutX="1050.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
                   <Button fx:id="A4" layoutX="1092.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="A5" layoutX="1134.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+                  <Button fx:id="B4" layoutX="1134.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
                   <Button fx:id="Db4" layoutX="909.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
                   <Button fx:id="Eb4" layoutX="951.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
                   <Button fx:id="Gb4" layoutX="1035.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
                   <Button fx:id="Ab4" layoutX="1075.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
                   <Button fx:id="Bb4" layoutX="1119.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="btnClear" layoutX="918.0" layoutY="-103.0" mnemonicParsing="false" onAction="#btnClearPressed" prefHeight="58.0" prefWidth="136.0" style="-fx-background-color: transpare; -fx-border-color: white; -fx-border-width: 5;" text="Clear" textFill="#faf5f5">
+                  <Button fx:id="btnClear" layoutX="918.0" layoutY="-103.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="136.0" style="-fx-background-color: transpare; -fx-border-color: white; -fx-border-width: 5;" text="Clear" textFill="#faf5f5">
                      <font>
                         <Font name="VNI-Briquet  Normal" size="15.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="28.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../resources/images/icons8-empty-trash-30.png" />
+                              <Image url="@images/icons8-empty-trash-30.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
                   <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="24.0" layoutY="-85.0" pickOnBounds="true" preserveRatio="true" rotate="2.1">
                      <image>
-                        <Image url="@../../resources/images/icons8-musical-notes-24%20(1).png" />
+                        <Image url="@images/icons8-musical-notes-24%20(1).png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="67.0" layoutY="-85.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../resources/images/icons8-musical-notes-50.png" />
+                        <Image url="@images/icons8-musical-notes-50.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="42.0" fitWidth="40.0" layoutX="1099.0" layoutY="-91.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../resources/images/icons8-musical-notes-64%20(1).png" />
+                        <Image url="@images/icons8-musical-notes-64%20(1).png" />
                      </image>
                   </ImageView>
                </children>
