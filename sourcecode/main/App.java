@@ -7,16 +7,18 @@ import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+
+import java.net.URL;
+
 import controllers.*;
 
 public class App extends Application {
-    public static void main(String[] args) {
-        launch();
-    }
+
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("MainScreens.fxml"));
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/screens/MainScreens.fxml"));
         Parent root = loader.load();
         MainScreenController controller = loader.getController();
         
@@ -43,5 +45,8 @@ public class App extends Application {
         stage.setTitle("Virtual piano");
         stage.setScene(scene);
         stage.show();
+    }
+    public static void main(String[] args) {
+        launch();
     }
 }

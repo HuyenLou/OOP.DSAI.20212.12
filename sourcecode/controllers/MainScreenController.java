@@ -5,12 +5,17 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import javax.swing.JOptionPane;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import sound.PianoPlayer;
 import sound.Player;
 
@@ -374,5 +379,18 @@ public class MainScreenController {
         B4.setOnMousePressed(e -> {
             player.playNote("B4");
         });
+    }
+    @FXML
+    void btnHelpPressed(ActionEvent event) {
+    }
+    @FXML
+    void btnExitPressed(ActionEvent event) {
+		int x = JOptionPane.showConfirmDialog(null, "Are you sure?", "Quit", JOptionPane.YES_NO_OPTION);
+		if (x == 1 || x == -1)
+			event.consume();
+		else {
+			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			stage.close();
+		}
     }
 }
