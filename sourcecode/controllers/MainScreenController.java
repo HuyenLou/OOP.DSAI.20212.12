@@ -15,13 +15,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
-<<<<<<< HEAD
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
-=======
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
->>>>>>> 8cfe8f860237c7d6885987d423f807fb7bbb1ceb
 import javafx.stage.Stage;
 import sound.PianoPlayer;
 import sound.Player;
@@ -148,8 +147,15 @@ public class MainScreenController {
             volumePane.setVisible(!volumePane.isVisible());
         });
         volumePane.setVisible(false);
-        volumeSlider.valueProperty().addListener((o, oldValue, newValue) -> {
-            player.setVolume(newValue.floatValue());
+        btnVolume.setOnAction(e -> {
+            volumePane.setVisible(!volumePane.isVisible());
+        });
+        btnStyles.setOnAction(e -> {
+            OptionStyles.setVisible(!volumePane.isVisible());
+        });
+        OptionStyles.setVisible(false);
+        btnStyles.setOnAction(e -> {
+            OptionStyles.setVisible(!OptionStyles.isVisible());
         });
         volumeSlider.setValue(75.0);
         
