@@ -164,12 +164,6 @@ public class MainScreenController {
             volumePane.setVisible(!volumePane.isVisible());
         });
         volumePane.setVisible(false);
-        btnVolume.setOnAction(e -> {
-            volumePane.setVisible(!volumePane.isVisible());
-        });
-        btnStyles.setOnAction(e -> {
-            OptionStyles.setVisible(!volumePane.isVisible());
-        });
         OptionStyles.setVisible(false);
         btnStyles.setOnAction(e -> {
             OptionStyles.setVisible(!OptionStyles.isVisible());
