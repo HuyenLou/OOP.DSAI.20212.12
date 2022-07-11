@@ -381,11 +381,13 @@ public class MainScreenController {
         });
     }
     @FXML
-    void btnHelpPressed(ActionEvent event) {
+    void btnHelpPressed(ActionEvent event) throws Exception {
+    	HelpScreenController helpScreenController = new HelpScreenController();
+		helpScreenController.showScreen();
     }
     @FXML
     void btnExitPressed(ActionEvent event) {
-		int x = JOptionPane.showConfirmDialog(null, "Are you sure?", "Quit", JOptionPane.YES_NO_OPTION);
+		int x = JOptionPane.showConfirmDialog(null, "Are you sure?", "Exit", JOptionPane.YES_NO_OPTION);
 		if (x == 1 || x == -1)
 			event.consume();
 		else {
