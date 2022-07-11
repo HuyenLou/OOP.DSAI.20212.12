@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -16,7 +23,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<StackPane alignment="BOTTOM_CENTER" prefHeight="790.0" prefWidth="1530.0" styleClass="stack-pane" stylesheets="@../../resources/effec.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainScreenController">
+<StackPane alignment="BOTTOM_CENTER" prefHeight="790.0" prefWidth="1530.0" styleClass="stack-pane" stylesheets="@../../resources/effec.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainScreenController">
    <children>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -81,7 +88,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnRecord" alignment="BASELINE_CENTER" mnemonicParsing="false" prefHeight="86.0" prefWidth="155.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Record" textFill="#f1f2f7">
+                  <Button fx:id="btnRecord" alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#showRecordButton" prefHeight="86.0" prefWidth="155.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Record" textFill="#f1f2f7">
                      <font>
                         <Font name="VNI-Briquet  Normal" size="16.0" />
                      </font>
@@ -114,13 +121,13 @@
                <children>
                   <AnchorPane fx:id="volumePane" layoutX="648.0" layoutY="14.0" prefHeight="71.0" prefWidth="242.0">
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03213b" height="48.0" stroke="BLACK" strokeType="INSIDE" width="242.0" />
-                        <Slider fx:id="volumeSlider" layoutX="11.0" layoutY="17.0" prefHeight="14.0" prefWidth="220.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03213b" height="48.0" layoutX="21.0" layoutY="12.0" stroke="BLACK" strokeType="INSIDE" width="242.0" />
+                        <Slider fx:id="volumeSlider" layoutX="32.0" layoutY="27.0" prefHeight="14.0" prefWidth="220.0" />
                      </children>
                   </AnchorPane>
                   <HBox fx:id="OptionStyles" layoutX="303.0" layoutY="14.0" prefHeight="58.0" prefWidth="338.0">
                      <children>
-                        <Button fx:id="btnPiano" alignment="BASELINE_CENTER" mnemonicParsing="false" prefHeight="86.0" prefWidth="144.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Piano" textFill="#f1f2f7">
+                        <Button fx:id="btnPiano" alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#usePiano" prefHeight="86.0" prefWidth="144.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Piano" textFill="#f1f2f7">
                            <font>
                               <Font name="VNI-Briquet  Normal" size="16.0" />
                            </font>
@@ -132,7 +139,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="btnGuitar" alignment="BASELINE_CENTER" mnemonicParsing="false" prefHeight="86.0" prefWidth="144.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Guitar" textFill="#f1f2f7">
+                        <Button fx:id="btnGuitar" alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#useGuitar" prefHeight="86.0" prefWidth="144.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Guitar" textFill="#f1f2f7">
                            <font>
                               <Font name="VNI-Briquet  Normal" size="16.0" />
                            </font>
@@ -144,7 +151,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="btnOrgan" alignment="BASELINE_CENTER" mnemonicParsing="false" prefHeight="86.0" prefWidth="144.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Organ" textFill="#f1f2f7">
+                        <Button fx:id="btnOrgan" alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#useOrgan" prefHeight="86.0" prefWidth="144.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Organ" textFill="#f1f2f7">
                            <font>
                               <Font name="VNI-Briquet  Normal" size="16.0" />
                            </font>
@@ -158,6 +165,10 @@
                         </Button>
                      </children>
                   </HBox>
+                  <Button fx:id="startRecordButton" layoutX="944.0" layoutY="28.0" mnemonicParsing="false" onAction="#startRecord" text="Start" />
+                  <Button fx:id="finishRecordButton" layoutX="1037.0" layoutY="28.0" mnemonicParsing="false" onAction="#finishRecord" text="Finish" />
+                  <Button fx:id="playRecordButton" layoutX="1151.0" layoutY="28.0" mnemonicParsing="false" onAction="#playRecord" text="Play" />
+                  <Label fx:id="noti" layoutX="944.0" layoutY="75.0" text="Recording......" textFill="#e8dcdc" />
                </children>
             </Pane>
             <AnchorPane prefHeight="269.0" prefWidth="883.0">
@@ -199,8 +210,8 @@
                   <Button fx:id="Gb3" layoutX="742.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
                   <Button fx:id="Ab3" layoutX="784.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
                   <Button fx:id="Bb3" layoutX="825.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <TextField layoutX="287.0" layoutY="-106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="71.0" prefWidth="601.0" style="-fx-background-radius: 20;" />
-                  <Button fx:id="btnReplay" layoutX="120.0" layoutY="-100.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="136.0" style="-fx-background-color: transpare; -fx-border-color: white; -fx-border-width: 5;" text="Replay" textFill="#faf5f5">
+                  <TextField fx:id="notePlayed" layoutX="287.0" layoutY="-106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="71.0" prefWidth="601.0" style="-fx-background-radius: 20;" />
+                  <Button fx:id="btnReplay" layoutX="120.0" layoutY="-100.0" mnemonicParsing="false" onAction="#startReplay" prefHeight="58.0" prefWidth="136.0" style="-fx-background-color: transpare; -fx-border-color: white; -fx-border-width: 5;" text="Replay" textFill="#faf5f5">
                      <font>
                         <Font name="VNI-Briquet  Normal" size="15.0" />
                      </font>
@@ -224,7 +235,7 @@
                   <Button fx:id="Gb4" layoutX="1035.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
                   <Button fx:id="Ab4" layoutX="1075.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
                   <Button fx:id="Bb4" layoutX="1119.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="btnClear" layoutX="918.0" layoutY="-103.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="136.0" style="-fx-background-color: transpare; -fx-border-color: white; -fx-border-width: 5;" text="Clear" textFill="#faf5f5">
+                  <Button fx:id="btnClear" layoutX="918.0" layoutY="-103.0" mnemonicParsing="false" onAction="#clearText" prefHeight="58.0" prefWidth="136.0" style="-fx-background-color: transpare; -fx-border-color: white; -fx-border-width: 5;" text="Clear" textFill="#faf5f5">
                      <font>
                         <Font name="VNI-Briquet  Normal" size="15.0" />
                      </font>
