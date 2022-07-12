@@ -4,21 +4,28 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+
 import javax.swing.JOptionPane;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 
+
 import javafx.stage.Stage;
+import sound.GuitarPlayer;
+import sound.OrganPlayer;
 import sound.PianoPlayer;
 import sound.Player;
+import sound.Recorder;
 
 public class MainScreenController {
     @FXML
@@ -133,11 +140,26 @@ public class MainScreenController {
     private Set<Character> inUse = new HashSet<>();
     private Player player = new PianoPlayer();
 
+
     final String pressedWhiteNStyle = "-fx-background-color: #c2c2c2; -fx-background-radius: 10;";
     final String releasedWhiteNStyle = "-fx-background-color: white; -fx-background-radius: 10;";
     final String pressedBlackNStyle = "-fx-background-color: #171717; -fx-background-radius: 10;";
     final String releasedBlackNStyle = "-fx-background-color: black; -fx-background-radius: 10;";
     
+
+    
+    @FXML 
+    void usePiano() {
+    	player = new PianoPlayer();
+    } 
+    @FXML 
+    void useGuitar() {
+    	player = new GuitarPlayer();
+    } 
+    @FXML 
+    void useOrgan() {
+    	player = new OrganPlayer();
+    } 
     @FXML
     private void initialize() {
         setKeyMap();
@@ -159,23 +181,43 @@ public class MainScreenController {
             }
         }
         setMouseEvent();
-
+        
+        noti.setVisible(false);
+       
+        startRecordButton.setVisible(false);
+        finishRecordButton.setVisible(false);
+        playRecordButton.setVisible(false);
         btnVolume.setOnAction(e -> {
             volumePane.setVisible(!volumePane.isVisible());
         });
         volumePane.setVisible(false);
-        btnVolume.setOnAction(e -> {
-            volumePane.setVisible(!volumePane.isVisible());
-        });
-        btnStyles.setOnAction(e -> {
-            OptionStyles.setVisible(!volumePane.isVisible());
-        });
         OptionStyles.setVisible(false);
         btnStyles.setOnAction(e -> {
             OptionStyles.setVisible(!OptionStyles.isVisible());
         });
     }
-
+    
+    @FXML 
+    private Button startRecordButton;
+    @FXML 
+    private Button finishRecordButton;
+    @FXML 
+    private Button playRecordButton;
+     
+    @FXML 
+    private Button btnClear;
+    
+    @FXML 
+    private TextField notePlayed ;
+    
+    @FXML  
+    void showRecordButton(ActionEvent event) {
+    	startRecordButton.setVisible(!startRecordButton.isVisible());
+    	finishRecordButton.setVisible(!finishRecordButton.isVisible());
+    	playRecordButton.setVisible(!playRecordButton.isVisible());
+    	
+    }
+    
     public void hideVolumeController() {
         if (!btnVolume.isFocused() && !volumeSlider.isFocused()) volumePane.setVisible(false);
     }
@@ -183,6 +225,17 @@ public class MainScreenController {
     public void closePlayer() {
         player.stop();
     }
+    
+    private String reduceLyric(String song) {
+    	if (song.length()<90) {
+    		return song;
+    	}
+    	else {
+    		return song.substring(song.length()-90, song.length());
+    	}
+    }
+
+
 
     private static final String keyString = "1!2@3#4$5%6^7&8*9(0)-_=+[{]};:,<.>/?";
     private static String getKeyString(char c) {
@@ -200,6 +253,9 @@ public class MainScreenController {
         Button button;
         if (shiftOn) button = buttonMap.get(s.charAt(1));
         else button = buttonMap.get(s.charAt(0));
+
+    public void pressNote(char c) {
+        Button button = buttonMap.get(c);
         if (button == null || inUse.contains(c))
             return;
         inUse.add(c);
@@ -210,6 +266,7 @@ public class MainScreenController {
                                         false, false, false,
                                         false, null));
     }
+
 
     private void resetStyle(Button button) {
         if (button == null) return;
@@ -234,6 +291,11 @@ public class MainScreenController {
         resetStyle(button1);
         resetStyle(button2);
         if (button1 == null || !inUse.contains(c))
+
+    
+    public void releaseNote(char c) {
+        Button button = buttonMap.get(c);
+        if (button == null || !inUse.contains(c))
             return;
         inUse.remove(c);
         button1.fireEvent(new MouseEvent(MouseEvent.MOUSE_RELEASED, 0, 0, 0, 0,
@@ -297,154 +359,202 @@ public class MainScreenController {
         buttonMap.put('?', Bb4);
         buttonMap.put('/', B4);
     }
-
+    
     private void setMouseEvent() {
         C1.setOnMousePressed(e -> {
             player.playNote("C1");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Db1.setOnMousePressed(e -> {
             player.playNote("Db1");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         D1.setOnMousePressed(e -> {
             player.playNote("D1");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Eb1.setOnMousePressed(e -> {
             player.playNote("Eb1");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         E1.setOnMousePressed(e -> {
             player.playNote("E1");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         F1.setOnMousePressed(e -> {
             player.playNote("F1");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Gb1.setOnMousePressed(e -> {
             player.playNote("Gb1");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         G1.setOnMousePressed(e -> {
             player.playNote("G1");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Ab1.setOnMousePressed(e -> {
             player.playNote("Ab1");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         A1.setOnMousePressed(e -> {
             player.playNote("A1");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Bb1.setOnMousePressed(e -> {
             player.playNote("Bb1");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         B1.setOnMousePressed(e -> {
             player.playNote("B1");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         
         C2.setOnMousePressed(e -> {
             player.playNote("C2");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Db2.setOnMousePressed(e -> {
             player.playNote("Db2");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         D2.setOnMousePressed(e -> {
             player.playNote("D2");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Eb2.setOnMousePressed(e -> {
             player.playNote("Eb2");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         E2.setOnMousePressed(e -> {
             player.playNote("E2");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         F2.setOnMousePressed(e -> {
             player.playNote("F2");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Gb2.setOnMousePressed(e -> {
             player.playNote("Gb2");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         G2.setOnMousePressed(e -> {
             player.playNote("G2");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Ab2.setOnMousePressed(e -> {
             player.playNote("Ab2");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         A2.setOnMousePressed(e -> {
             player.playNote("A2");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Bb2.setOnMousePressed(e -> {
             player.playNote("Bb2");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         B2.setOnMousePressed(e -> {
             player.playNote("B2");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         
         C3.setOnMousePressed(e -> {
             player.playNote("C3");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Db3.setOnMousePressed(e -> {
             player.playNote("Db3");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         D3.setOnMousePressed(e -> {
             player.playNote("D3");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Eb3.setOnMousePressed(e -> {
             player.playNote("Eb3");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         E3.setOnMousePressed(e -> {
             player.playNote("E3");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         F3.setOnMousePressed(e -> {
             player.playNote("F3");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Gb3.setOnMousePressed(e -> {
             player.playNote("Gb3");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         G3.setOnMousePressed(e -> {
             player.playNote("G3");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Ab3.setOnMousePressed(e -> {
             player.playNote("Ab3");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         A3.setOnMousePressed(e -> {
             player.playNote("A3");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Bb3.setOnMousePressed(e -> {
             player.playNote("Bb3");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         B3.setOnMousePressed(e -> {
             player.playNote("B3");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
 
         C4.setOnMousePressed(e -> {
             player.playNote("C4");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Db4.setOnMousePressed(e -> {
             player.playNote("Db4");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         D4.setOnMousePressed(e -> {
             player.playNote("D4");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Eb4.setOnMousePressed(e -> {
             player.playNote("Eb4");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         E4.setOnMousePressed(e -> {
             player.playNote("E4");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         F4.setOnMousePressed(e -> {
             player.playNote("F4");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Gb4.setOnMousePressed(e -> {
             player.playNote("Gb4");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         G4.setOnMousePressed(e -> {
             player.playNote("G4");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Ab4.setOnMousePressed(e -> {
             player.playNote("Ab4");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         A4.setOnMousePressed(e -> {
             player.playNote("A4");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         Bb4.setOnMousePressed(e -> {
             player.playNote("Bb4");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
         B4.setOnMousePressed(e -> {
             player.playNote("B4");
+            notePlayed.setText(reduceLyric(player.getText())) ;
         });
     }
     @FXML
@@ -466,4 +576,46 @@ public class MainScreenController {
     void btnStylesPressed(ActionEvent event) {
     	OptionStyles.setVisible(true);
     }
+    
+    Recorder recorder = new Recorder();
+    @FXML
+    void startRecord(ActionEvent event) {
+    	recorder.begin();
+    	noti.setVisible(true);
+
+    }
+
+    @FXML
+    void finishRecord(ActionEvent event) {
+    	recorder.finish();
+    	noti.setVisible(false);
+
+    }
+    @FXML
+    void playRecord(ActionEvent event) {
+    	recorder.play();
+   }
+    
+    @FXML 
+    void startReplay() {	
+    	String[] notes = player.getText().strip().split(" ");
+    	for(int i=0; i< notes.length; i++){
+    		player.playNote(notes[i]);
+    		try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    		
+    	}
+    }
+    @FXML 
+    void clearText() {
+    	notePlayed.setText("");
+    	player.setText("");
+    }
+    @FXML 
+    private Label noti;
+    
 }
