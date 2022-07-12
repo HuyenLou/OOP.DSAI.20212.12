@@ -1,5 +1,6 @@
 package controllers;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -9,7 +10,10 @@ import javax.swing.JOptionPane;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
@@ -527,7 +531,7 @@ public class MainScreenController {
    }
     
     @FXML 
-    void startReplay() {	
+    void startReplay(ActionEvent event) {	
     	String[] notes = player.getText().strip().split(" ");
     	for(int i=0; i< notes.length; i++){
     		player.playNote(notes[i]);
@@ -541,11 +545,33 @@ public class MainScreenController {
     	}
     }
     @FXML 
-    void clearText() {
+    void clearText(ActionEvent event) {
     	notePlayed.setText("");
     	player.setText("");
     }
     @FXML 
     private Label noti;
+    
+    @FXML 
+    private Button showListButton;
+    
+    @FXML 
+    void showList(ActionEvent event) {
+    	try {
+    		final String CART_FXML_FILE_PATH= "/screens/RecordList.fxml";
+    		    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(CART_FXML_FILE_PATH));
+    			fxmlLoader.setController(new RecordListController());
+    			Parent root = fxmlLoader.load();
+    			Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+    			stage.setScene(new Scene(root));
+    			stage.setTitle("CART");
+    			stage.show();
+    			
+    	} catch(IOException e) {
+    		e.printStackTrace();
+    	}
+    }
+    
+    
     
 }
