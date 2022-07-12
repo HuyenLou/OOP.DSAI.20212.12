@@ -1,5 +1,6 @@
 package controllers;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -8,17 +9,22 @@ import javax.swing.JOptionPane;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
-
 import javafx.stage.Stage;
 import sound.PianoPlayer;
+import sound.GuitarPlayer;
+import sound.OrganPlayer;
 import sound.Player;
+import sound.Recorder;
 
 public class MainScreenController {
     @FXML
@@ -138,6 +144,19 @@ public class MainScreenController {
     final String pressedBlackNStyle = "-fx-background-color: #171717; -fx-background-radius: 10;";
     final String releasedBlackNStyle = "-fx-background-color: black; -fx-background-radius: 10;";
     
+    @FXML 
+    void usePiano() {
+    	player = new PianoPlayer();
+    } 
+    @FXML 
+    void useGuitar() {
+    	player = new GuitarPlayer();
+    } 
+    @FXML 
+    void useOrgan() {
+    	player = new OrganPlayer();
+    } 
+
     @FXML
     private void initialize() {
         setKeyMap();
@@ -183,6 +202,16 @@ public class MainScreenController {
     public void closePlayer() {
         player.stop();
     }
+    
+    private String reduceLyric(String song) {
+    	if (song.length()<90) {
+            return song;
+    	}
+    	else {
+            return song.substring(song.length()-90, song.length());
+    	}
+    }
+
 
     private static final String keyString = "1!2@3#4$5%6^7&8*9(0)-_=+[{]};:,<.>/?";
     private static String getKeyString(char c) {
@@ -210,7 +239,7 @@ public class MainScreenController {
                                         false, false, false,
                                         false, null));
     }
-
+    
     private void resetStyle(Button button) {
         if (button == null) return;
         if (button.getStyle().equals(pressedWhiteNStyle)) {
@@ -237,11 +266,11 @@ public class MainScreenController {
             return;
         inUse.remove(c);
         button1.fireEvent(new MouseEvent(MouseEvent.MOUSE_RELEASED, 0, 0, 0, 0,
-                                        MouseButton.PRIMARY, 1,
-                                        false, false, false,
-                                        false, false, false,
-                                        false, false, false,
-                                        false, null));
+                                         MouseButton.PRIMARY, 1,
+                                         false, false, false,
+                                         false, false, false,
+                                         false, false, false,
+                                         false, null));
     }
 
     private void setKeyMap() {
@@ -465,5 +494,65 @@ public class MainScreenController {
     @FXML
     void btnStylesPressed(ActionEvent event) {
     	OptionStyles.setVisible(true);
+    }
+    
+    Recorder recorder = new Recorder();
+    @FXML
+    void startRecord(ActionEvent event) {
+    	recorder.begin();
+    	// noti.setVisible(true);
+
+    }
+
+    @FXML
+    void finishRecord(ActionEvent event) {
+    	recorder.finish();
+    	// noti.setVisible(false);
+
+    }
+    @FXML
+    void playRecord(ActionEvent event) {
+    	recorder.play();
+   }
+    
+    @FXML 
+    void startReplay(ActionEvent event) {	
+    	// String[] notes = player.getText().strip().split(" ");
+    	// for(int i=0; i< notes.length; i++){
+            // player.playNote(notes[i]);
+            // try {
+                // Thread.sleep(1000);
+            // } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                // e.printStackTrace();
+            // }
+    	// }
+    }
+    @FXML 
+    void clearText(ActionEvent event) {
+    	// notePlayed.setText("");
+    	// player.setText("");
+    }
+    // @FXML 
+    // private Label noti;
+    
+    @FXML 
+    private Button showListButton;
+    
+    @FXML 
+    void showList(ActionEvent event) {
+    	try {
+            final String CART_FXML_FILE_PATH= "/screens/RecordList.fxml";
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(CART_FXML_FILE_PATH));
+            fxmlLoader.setController(new RecordListController());
+            Parent root = fxmlLoader.load();
+            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("CART");
+            stage.show();
+            
+    	} catch(IOException e) {
+    		e.printStackTrace();
+    	}
     }
 }

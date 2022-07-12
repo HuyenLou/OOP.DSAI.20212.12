@@ -13,6 +13,7 @@ import controllers.*;
 public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
+    	// FXMLLoader loader = new FXMLLoader(getClass().getResource("/screens/MainScreens.fxml"));
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/MainScreens.fxml"));
         Parent root = loader.load();
         MainScreenController controller = loader.getController();
@@ -37,7 +38,6 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
     }
-    
     public static void main(String[] args) {
         launch();
     }

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="179.0" prefWidth="432.0" styleClass="stack-pane" stylesheets="@../../resources/effec.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="179.0" prefWidth="432.0" styleClass="stack-pane" stylesheets="@effec.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox layoutY="94.0" prefHeight="86.0" prefWidth="432.0">
          <children>
@@ -19,7 +19,7 @@
                <graphic>
                   <ImageView fitHeight="28.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../resources/images/piano.png" />
+                        <Image url="@images/piano.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -31,7 +31,7 @@
                <graphic>
                   <ImageView fitHeight="28.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../resources/images/guitar.png" />
+                        <Image url="@images/guitar.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -43,7 +43,7 @@
                <graphic>
                   <ImageView fitHeight="28.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../resources/images/organ.png" />
+                        <Image url="@images/organ.png" />
                      </image>
                   </ImageView>
                </graphic>
