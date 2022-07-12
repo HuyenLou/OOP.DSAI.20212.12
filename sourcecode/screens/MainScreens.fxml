@@ -170,6 +170,7 @@
                   <Button fx:id="finishRecordButton" layoutX="1037.0" layoutY="28.0" mnemonicParsing="false" onAction="#finishRecord" text="Finish" />
                   <Button fx:id="playRecordButton" layoutX="1151.0" layoutY="28.0" mnemonicParsing="false" onAction="#playRecord" text="Play" />
                   <Label fx:id="noti" layoutX="944.0" layoutY="75.0" text="Recording......" textFill="#e8dcdc" />
+                  <Button fx:id="showListButton" layoutX="1258.0" layoutY="28.0" mnemonicParsing="false" onAction="#showList" text="showList" />
                </children>
             </Pane>
             <AnchorPane prefHeight="269.0" prefWidth="883.0">
