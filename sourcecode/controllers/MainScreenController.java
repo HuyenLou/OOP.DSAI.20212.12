@@ -4,11 +4,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
-
+import javax.swing.JOptionPane;
 
 import javafx.event.ActionEvent;
-
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -17,7 +15,6 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 
 import javafx.stage.Stage;
 import sound.PianoPlayer;
@@ -136,9 +133,31 @@ public class MainScreenController {
     private Set<Character> inUse = new HashSet<>();
     private Player player = new PianoPlayer();
 
+    final String pressedWhiteNStyle = "-fx-background-color: #c2c2c2; -fx-background-radius: 10;";
+    final String releasedWhiteNStyle = "-fx-background-color: white; -fx-background-radius: 10;";
+    final String pressedBlackNStyle = "-fx-background-color: #171717; -fx-background-radius: 10;";
+    final String releasedBlackNStyle = "-fx-background-color: black; -fx-background-radius: 10;";
+    
     @FXML
     private void initialize() {
         setKeyMap();
+        for (Button button : buttonMap.values()) {
+            if (button.getStyle().contains("white")) {
+                button.addEventFilter(MouseEvent.MOUSE_PRESSED, e -> {
+                    button.setStyle(pressedWhiteNStyle);
+                });
+                button.addEventFilter(MouseEvent.MOUSE_RELEASED, e -> {
+                    button.setStyle(releasedWhiteNStyle);
+                });
+            } else {
+                button.addEventFilter(MouseEvent.MOUSE_PRESSED, e -> {
+                    button.setStyle(pressedBlackNStyle);
+                });
+                button.addEventFilter(MouseEvent.MOUSE_RELEASED, e -> {
+                    button.setStyle(releasedBlackNStyle);
+                });
+            }
+        }
         setMouseEvent();
 
         btnVolume.setOnAction(e -> {
@@ -165,8 +184,22 @@ public class MainScreenController {
         player.stop();
     }
 
-    public void pressNote(char c) {
-        Button button = buttonMap.get(c);
+    private static final String keyString = "1!2@3#4$5%6^7&8*9(0)-_=+[{]};:,<.>/?";
+    private static String getKeyString(char c) {
+        if ('A' <= c && c <= 'Z') {
+            return String.format("%c%c", c - 32, c);
+        }
+        int id = keyString.indexOf(c);
+        if (id < 0) return null;
+        return String.format("%c%c", keyString.charAt(id), keyString.charAt(id + 1));
+    }
+
+    public void pressNote(char c, boolean shiftOn) {
+        String s = getKeyString(c);
+        if (s == null) return;
+        Button button;
+        if (shiftOn) button = buttonMap.get(s.charAt(1));
+        else button = buttonMap.get(s.charAt(0));
         if (button == null || inUse.contains(c))
             return;
         inUse.add(c);
@@ -178,12 +211,32 @@ public class MainScreenController {
                                         false, null));
     }
 
-    public void releaseNote(char c) {
-        Button button = buttonMap.get(c);
-        if (button == null || !inUse.contains(c))
+    private void resetStyle(Button button) {
+        if (button == null) return;
+        if (button.getStyle().equals(pressedWhiteNStyle)) {
+            button.setStyle(releasedWhiteNStyle);
+        } else if (button.getStyle().equals(pressedBlackNStyle)) {
+            button.setStyle(releasedBlackNStyle);
+        }
+    }
+
+    public void releaseNote(char c, boolean shiftDown) {
+        String s = getKeyString(c);
+        if (s == null) return;
+        Button button1, button2;
+        if (shiftDown) {
+            button1 = buttonMap.get(s.charAt(1));
+            button2 = buttonMap.get(s.charAt(0));
+        } else {
+            button1 = buttonMap.get(s.charAt(0));
+            button2 = buttonMap.get(s.charAt(1));
+        }
+        resetStyle(button1);
+        resetStyle(button2);
+        if (button1 == null || !inUse.contains(c))
             return;
         inUse.remove(c);
-        button.fireEvent(new MouseEvent(MouseEvent.MOUSE_RELEASED, 0, 0, 0, 0,
+        button1.fireEvent(new MouseEvent(MouseEvent.MOUSE_RELEASED, 0, 0, 0, 0,
                                         MouseButton.PRIMARY, 1,
                                         false, false, false,
                                         false, false, false,
@@ -397,17 +450,17 @@ public class MainScreenController {
     @FXML
     void btnHelpPressed(ActionEvent event) throws Exception {
     	HelpScreenController helpScreenController = new HelpScreenController();
-		helpScreenController.showScreen();
+        helpScreenController.showScreen();
     }
     @FXML
     void btnExitPressed(ActionEvent event) {
-		int x = JOptionPane.showConfirmDialog(null, "Are you sure?", "Exit", JOptionPane.YES_NO_OPTION);
-		if (x == 1 || x == -1)
-			event.consume();
-		else {
-			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-			stage.close();
-		}
+        int x = JOptionPane.showConfirmDialog(null, "Are you sure?", "Exit", JOptionPane.YES_NO_OPTION);
+        if (x == 1 || x == -1)
+            event.consume();
+        else {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.close();
+        }
     }
     @FXML
     void btnStylesPressed(ActionEvent event) {
