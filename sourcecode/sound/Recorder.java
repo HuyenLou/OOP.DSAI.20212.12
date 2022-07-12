@@ -14,9 +14,10 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.TargetDataLine;
 
 public class Recorder {
+			private int count=0;
 
-			String file_path="/OOP.DSAI.20212.12/resources/audio/RecordAudio.wav";
-			File wavFile = new File(file_path);
+			String file_path;
+			
 			
 
 			AudioFileFormat.Type fileType = AudioFileFormat.Type.WAVE;
@@ -49,8 +50,9 @@ public class Recorder {
 			        AudioInputStream ais = new AudioInputStream(line);
 			
 			        System.out.println("Start recording...");
-			
-			        
+			        count+= 1;
+			        file_path = "/OOP.DSAI.20212.12/resources/audio/RecordAudio"+ String.valueOf(count)+".wav";
+			        File wavFile = new File(file_path);
 			        AudioSystem.write(ais, fileType, wavFile);
 			
 			    } catch (LineUnavailableException ex) {
