@@ -1,12 +1,8 @@
 package controllers;
 
 import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,13 +19,10 @@ public class HelpScreenController {
 	private String line;
 
 
-    @FXML
-    private void initialize() {
+	public HelpScreenController() {
 		try {
-			File file = new File("sourcecode/controllers/helptext.txt");
-			FileInputStream ft = new FileInputStream(file);
-			DataInputStream in = new DataInputStream(ft);
-            BufferedReader br = new BufferedReader(new InputStreamReader(in));
+			BufferedReader br = new BufferedReader(new FileReader("sourcecode/screens/helptext.txt"));
+
 			while ((line = br.readLine()) != null) {
 				helpText.appendText(line);
 				helpText.appendText("\n");
