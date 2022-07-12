@@ -8,10 +8,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-
-
-import java.net.URL;
-
 import controllers.*;
 
 public class App extends Application {
@@ -19,8 +15,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/screens/MainScreens.fxml"));
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/screens/MainScreens.fxml"));
         Parent root = loader.load();
         MainScreenController controller = loader.getController();
         
