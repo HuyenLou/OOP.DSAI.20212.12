@@ -3,9 +3,18 @@ package sound;
 import org.jfugue.realtime.RealtimePlayer;
 import org.jfugue.theory.Note;
 
+import javafx.scene.control.TextField;
+
 public abstract class Player {
     protected RealtimePlayer jfPlayer;
     private byte volume;
+    private  String text="";
+    public String getText() {
+    	return this.text;
+    }
+    public void setText(String str) {
+    	this.text =str;
+    }
 
     public Player() {
         try {
@@ -20,6 +29,7 @@ public abstract class Player {
     }
 
     protected void playNote(String str, int octave) {
+        text=text+ str+ " ";
         int note;
         switch (str.charAt(0)) {
             case 'C': note = 0; break;

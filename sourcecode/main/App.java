@@ -12,7 +12,7 @@ import controllers.*;
 public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/screens/MainScreens.fxml"));
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/MainScreens.fxml"));
         Parent root = loader.load();
         MainScreenController controller = loader.getController();
         
