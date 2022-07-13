@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-
+import javax.swing.JOptionPane;
 
 import javafx.event.ActionEvent;
 
@@ -15,13 +15,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
-<<<<<<< HEAD
+
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
-=======
+
 import javafx.scene.layout.Pane;
 
->>>>>>> 8cfe8f860237c7d6885987d423f807fb7bbb1ceb
 import javafx.stage.Stage;
 import sound.PianoPlayer;
 import sound.Player;
