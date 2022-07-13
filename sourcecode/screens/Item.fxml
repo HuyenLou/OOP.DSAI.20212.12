@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="175.0" prefWidth="305.0">
+         <children>
+            <Label fx:id="lblTitle" prefHeight="50.0" prefWidth="305.0" text="Title" textFill="#1e0101" />
+            <Label fx:id="lblCost" prefHeight="50.0" prefWidth="305.0" textFill="WHITE" />
+            <Button fx:id="btnPlay" mnemonicParsing="false" onAction="#btnPlayClicked" prefHeight="50.0" prefWidth="305.0" text="Play" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="305.0" spacing="20.0" />
+   </children>
+</AnchorPane>
