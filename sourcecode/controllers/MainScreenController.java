@@ -1,11 +1,7 @@
 package controllers;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import javax.swing.JOptionPane;
+import java.util.*;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,10 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.Slider;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 
@@ -559,11 +552,15 @@ public class MainScreenController {
     }
     @FXML
     void btnExitPressed(ActionEvent event) {
-        int x = JOptionPane.showConfirmDialog(null, "Are you sure?", "Exit", JOptionPane.YES_NO_OPTION);
-        if (x == 1 || x == -1)
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exit confirmation");
+        alert.setHeaderText("Are you sure?");
+        Optional<ButtonType> option = alert.showAndWait();
+        if (option.isEmpty() || option.get() == ButtonType.CANCEL)
             event.consume();
         else {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            closePlayer();
             stage.close();
         }
     }
