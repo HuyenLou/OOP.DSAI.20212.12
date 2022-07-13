@@ -17,8 +17,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+
+import javafx.scene.layout.Pane;
+
 import javafx.stage.Stage;
 import sound.PianoPlayer;
 import sound.GuitarPlayer;

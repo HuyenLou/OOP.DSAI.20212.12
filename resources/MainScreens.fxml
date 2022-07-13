@@ -176,44 +176,152 @@
             <AnchorPane prefHeight="269.0" prefWidth="883.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#04182b" height="350.0" layoutX="-9.0" layoutY="-124.0" stroke="BLACK" strokeType="INSIDE" width="1190.0" />
-                  <Button fx:id="C1" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="D1" layoutX="42.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="E1" layoutX="84.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="F1" layoutX="126.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="G1" layoutX="168.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="A1" layoutX="210.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="B1" alignment="TOP_LEFT" layoutX="252.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="C2" layoutX="294.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="D2" layoutX="336.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="E2" layoutX="378.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="F2" layoutX="420.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="G2" layoutX="462.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="A2" layoutX="504.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="B2" layoutX="546.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="C3" layoutX="588.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="D3" layoutX="630.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="E3" layoutX="672.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="F3" layoutX="714.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="G3" layoutX="756.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="A3" layoutX="798.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="B3" layoutX="840.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="Db1" layoutX="24.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Eb1" layoutX="68.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Gb1" layoutX="151.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Ab1" layoutX="196.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Bb1" layoutX="238.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Db2" layoutX="322.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Eb2" layoutX="364.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Gb2" layoutX="448.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Ab2" layoutX="490.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Bb2" layoutX="530.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Db3" layoutX="616.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Eb3" layoutX="656.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Gb3" layoutX="742.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Ab3" layoutX="784.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Bb3" layoutX="825.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <TextField layoutX="287.0" layoutY="-106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="71.0" prefWidth="601.0" style="-fx-background-radius: 20;" />
-                  <Button fx:id="btnReplay" layoutX="120.0" layoutY="-100.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="136.0" style="-fx-background-color: transpare; -fx-border-color: white; -fx-border-width: 5;" text="Replay" textFill="#faf5f5">
+                  <Button fx:id="C1" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;C1&#10;&#10; 1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="D1" layoutX="42.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;D1&#10;&#10; 2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                  
+                  <Button fx:id="E1" layoutX="84.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;E1&#10;&#10; 3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                     
+                  <Button fx:id="F1" layoutX="126.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;F1&#10;&#10; 4">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="G1" layoutX="168.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;G1&#10;&#10; 5">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="A1" layoutX="210.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;A1&#10;&#10; 6">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="B1" layoutX="252.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;B1&#10;&#10; 7">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="C2" layoutX="294.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;C2&#10;&#10; y">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="D2" layoutX="336.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;D2&#10;&#10; u">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="E2" layoutX="378.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;E2&#10;&#10; i">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                      
+                  <Button fx:id="F2" layoutX="420.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;F2&#10;&#10; o">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="G2" layoutX="462.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;G2&#10;&#10; p">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="A2" layoutX="504.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;A2&#10;&#10; [">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="B2" layoutX="546.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;B2&#10;&#10; ]">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="C3" layoutX="588.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;C3&#10;&#10; a">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="D3" layoutX="630.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;D3&#10;&#10; s">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="E3" layoutX="672.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;E3&#10;&#10; d">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="F3" layoutX="714.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;F3&#10;&#10; f">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="G3" layoutX="756.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;G3&#10;&#10; g">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="A3" layoutX="798.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;A3&#10;&#10; h">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="B3" layoutX="840.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;B3&#10;&#10; j">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>                       
+                  <Button fx:id="Db1" layoutX="24.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Db1&#10;&#10;&#10; @" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Eb1" layoutX="68.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Eb1&#10;&#10;&#10; #" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Gb1" layoutX="151.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Gb1&#10;&#10;&#10; %" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Ab1" layoutX="196.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Ab1&#10;&#10;&#10;  ^" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Bb1" layoutX="238.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Bb1&#10;&#10;&#10; &amp;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Db2" layoutX="322.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Db2&#10;&#10;&#10;  U" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Eb2" layoutX="364.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Eb2&#10;&#10;&#10;  I" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Gb2" layoutX="448.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Gb2&#10;&#10;&#10;  P" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Ab2" layoutX="490.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Ab2&#10;&#10;&#10;  {" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Bb2" layoutX="530.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Bb2&#10;&#10;&#10;  }" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Db3" layoutX="616.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Db3&#10;&#10;&#10;  S" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Eb3" layoutX="656.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Eb3&#10;&#10;&#10; D" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Gb3" layoutX="742.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Gb3&#10;&#10;&#10;  G" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Ab3" layoutX="784.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Ab3&#10;&#10;&#10;  H" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Bb3" layoutX="825.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Bb3&#10;&#10;&#10;  J" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <TextField fx:id="notePlayed" layoutX="287.0" layoutY="-106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="71.0" prefWidth="601.0" style="-fx-background-radius: 20;" />
+                  <Button fx:id="btnReplay" layoutX="120.0" layoutY="-100.0" mnemonicParsing="false" onAction="#startReplay" prefHeight="58.0" prefWidth="136.0" style="-fx-background-color: transpare; -fx-border-color: white; -fx-border-width: 5;" text="Replay" textFill="#faf5f5">
                      <font>
                         <Font name="VNI-Briquet  Normal" size="15.0" />
                      </font>
@@ -225,19 +333,55 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="C4" layoutX="882.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="D4" layoutX="924.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="E4" layoutX="966.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="F4" layoutX="1008.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="G4" layoutX="1050.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="A4" layoutX="1092.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="B4" layoutX="1134.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
-                  <Button fx:id="Db4" layoutX="909.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Eb4" layoutX="951.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Gb4" layoutX="1035.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Ab4" layoutX="1075.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="Bb4" layoutX="1119.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" />
-                  <Button fx:id="btnClear" layoutX="918.0" layoutY="-103.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="136.0" style="-fx-background-color: transpare; -fx-border-color: white; -fx-border-width: 5;" text="Clear" textFill="#faf5f5">
+                  <Button fx:id="C4" layoutX="882.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;C4&#10;&#10; v">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="D4" layoutX="924.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;D4&#10;&#10; b">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="E4" layoutX="966.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;E4&#10;&#10; n">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="F4" layoutX="1008.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;F4&#10;&#10; m">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="G4" layoutX="1050.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;G4&#10;&#10;  ,">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="A4" layoutX="1092.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;A4&#10;&#10;  .">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="B4" layoutX="1134.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="&#10;&#10;&#10;&#10;&#10;&#10;B4&#10;&#10; /">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="Db4" layoutX="909.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Db4&#10;&#10;&#10;  B" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Eb4" layoutX="951.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Eb4&#10;&#10;&#10;  N" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Gb4" layoutX="1035.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Gb4&#10;&#10;&#10;  &lt;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Ab4" layoutX="1075.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Ab4&#10;&#10;&#10;  &gt;" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="Bb4" layoutX="1119.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 9;" text="&#10;Bb4&#10;&#10;&#10;  ?" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font></Button>
+                  <Button fx:id="btnClear" layoutX="918.0" layoutY="-103.0" mnemonicParsing="false" onAction="#clearText" prefHeight="58.0" prefWidth="136.0" style="-fx-background-color: transpare; -fx-border-color: white; -fx-border-width: 5;" text="Clear" textFill="#faf5f5">
                      <font>
                         <Font name="VNI-Briquet  Normal" size="15.0" />
                      </font>
