@@ -220,7 +220,7 @@ public class MainScreenController {
     private static final String keyString = "1!2@3#4$5%6^7&8*9(0)-_=+[{]};:,<.>/?";
     private static String getKeyString(char c) {
         if ('A' <= c && c <= 'Z') {
-            return String.format("%c%c", c - 32, c);
+            return String.format("%c%c", c + 32, c);
         }
         int id = keyString.indexOf(c);
         if (id < 0) return null;
