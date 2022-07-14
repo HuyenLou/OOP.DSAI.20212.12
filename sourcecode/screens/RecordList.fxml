@@ -11,7 +11,7 @@
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Record List" textFill="#004cff">
+            <Label prefWidth="600.0" text="Record List" textFill="#004cff">
                <font>
                   <Font size="50.0" />
                </font>
@@ -20,6 +20,11 @@
                </padding>
             </Label>
             <Region prefHeight="73.0" prefWidth="749.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#back" prefHeight="80.0" prefWidth="500.0" text="Back to the Piano">
+               <HBox.margin>
+                  <Insets bottom="10.0" right="50.0" top="10.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <ScrollPane prefHeight="760.0" prefWidth="1024.0">

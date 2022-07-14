@@ -1,8 +1,8 @@
 package sound;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.Files;
 
 import javax.sound.sampled.AudioFileFormat;
 import javax.sound.sampled.AudioFormat;
@@ -50,6 +50,16 @@ public class Recorder {
             AudioInputStream ais = new AudioInputStream(line);
 			
             System.out.println("Start recording...");
+            while (true) {
+            	File file = new File("/OOP.DSAI.20212.12/resources/audio/RecordAudio"+ String.valueOf(count+1)+".wav");
+            	if (file.exists()== true) {
+            		count+=1;
+            		
+            }
+            	else {
+            		break;
+            	}
+            }
             count+= 1;
             file_path = "/OOP.DSAI.20212.12/resources/audio/RecordAudio"+ String.valueOf(count)+".wav";
             File wavFile = new File(file_path);

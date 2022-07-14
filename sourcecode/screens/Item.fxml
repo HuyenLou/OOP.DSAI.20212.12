@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane style="-fx-background-color: #6bdada;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox alignment="CENTER" prefHeight="175.0" prefWidth="305.0">
          <children>
-            <Label fx:id="lblTitle" prefHeight="50.0" prefWidth="305.0" text="Title" textFill="#1e0101" />
+            <Label fx:id="lblTitle" prefHeight="50.0" prefWidth="305.0" text="Title" textFill="#000707" />
             <Label fx:id="lblCost" prefHeight="50.0" prefWidth="305.0" textFill="WHITE" />
             <Button fx:id="btnPlay" mnemonicParsing="false" onAction="#btnPlayClicked" prefHeight="50.0" prefWidth="305.0" text="Play" />
          </children>

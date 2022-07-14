@@ -24,7 +24,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<StackPane alignment="BOTTOM_CENTER" prefHeight="790.0" prefWidth="1530.0" styleClass="stack-pane" stylesheets="@../../resources/effec.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainScreenController">
+<StackPane alignment="BOTTOM_CENTER" prefHeight="790.0" prefWidth="1530.0" styleClass="stack-pane" stylesheets="@../../resources/effec.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainScreenController">
    <children>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -89,7 +89,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btnRecord" alignment="BASELINE_CENTER" mnemonicParsing="false" prefHeight="86.0" prefWidth="155.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Record" textFill="#f1f2f7">
+                  <Button fx:id="btnRecord" alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#showRecordButton" prefHeight="86.0" prefWidth="155.0" style="-fx-border-color: white; -fx-background-color: transpare; -fx-border-width: 5; -fx-background-radius: 10;" text="Record" textFill="#f1f2f7">
                      <font>
                         <Font name="VNI-Briquet  Normal" size="16.0" />
                      </font>
