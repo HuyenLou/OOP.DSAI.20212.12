@@ -140,7 +140,7 @@ public class MainScreenController {
 
     final String pressedWhiteNStyle = "-fx-background-color: #c2c2c2; -fx-background-radius: 10;";
     final String releasedWhiteNStyle = "-fx-background-color: white; -fx-background-radius: 10;";
-    final String pressedBlackNStyle = "-fx-background-color: #171717; -fx-background-radius: 10;";
+    final String pressedBlackNStyle = "-fx-background-color: #737373; -fx-background-radius: 10;";
     final String releasedBlackNStyle = "-fx-background-color: black; -fx-background-radius: 10;";
     
     @FXML 
