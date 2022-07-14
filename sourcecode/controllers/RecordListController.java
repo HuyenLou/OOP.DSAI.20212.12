@@ -3,16 +3,55 @@ package controllers;
 import java.io.File;
 import java.io.IOException;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
 public class RecordListController {
 
     @FXML
     private GridPane gridPane;
+    
+    @FXML 
+    private Button backButton;
+
+    @FXML 
+    public void back(ActionEvent event) throws IOException {
+    	
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/screens/MainScreens.fxml"));
+        Parent root = loader.load();
+        MainScreenController controller = loader.getController();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        scene.addEventFilter(KeyEvent.KEY_PRESSED, e -> {
+            controller.pressNote((char)e.getCode().getCode(), e.isShiftDown());
+            e.consume();
+        });
+        scene.addEventFilter(KeyEvent.KEY_RELEASED, e -> {
+            controller.releaseNote((char)e.getCode().getCode(), e.isShiftDown());
+            e.consume();
+        });
+        scene.addEventFilter(MouseEvent.MOUSE_RELEASED, e -> {
+            controller.hideVolumeController();
+        });
+
+        stage.setOnCloseRequest(e -> {
+            controller.closePlayer();
+        });
+        stage.setTitle("Virtual piano");
+        stage.setScene(scene);
+        stage.show();
+    }
     @FXML
     public void initialize() {
     	final String ITEM_FXML_FILE_PATH="/screens/Item.fxml";

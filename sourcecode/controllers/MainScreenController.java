@@ -182,6 +182,7 @@ public class MainScreenController {
         startRecordButton.setVisible(false);
         finishRecordButton.setVisible(false);
         playRecordButton.setVisible(false);
+        showListButton.setVisible(false);
         
         btnVolume.setOnAction(e -> {
             volumePane.setVisible(!volumePane.isVisible());
@@ -214,6 +215,7 @@ public class MainScreenController {
     	startRecordButton.setVisible(!startRecordButton.isVisible());
     	finishRecordButton.setVisible(!finishRecordButton.isVisible());
     	playRecordButton.setVisible(!playRecordButton.isVisible());	
+    	showListButton.setVisible(!showListButton.isVisible());
     }
 
     public void hideVolumeController() {
@@ -619,7 +621,7 @@ public class MainScreenController {
             Parent root = fxmlLoader.load();
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("CART");
+//            stage.setTitle("");
             stage.show();
             
     	} catch(IOException e) {
