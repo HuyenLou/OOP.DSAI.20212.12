@@ -7,14 +7,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="588.0" style="-fx-background-color: #6674bf;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
   <children>
-    <VBox prefHeight="655.0" prefWidth="562.0">
+    <VBox prefHeight="630.0" prefWidth="588.0">
       <children>
         <Label alignment="CENTER" text="Instructions" textFill="#f7f7fa">
           <font>
-            <Font name=".VnCooper Medium" size="37.0" />
+            <Font name=".VnCooper Medium" size="30.0" />
           </font>
           <padding>
             <Insets left="180.0" />
@@ -32,7 +31,7 @@
         <Insets />
       </opaqueInsets>
       <padding>
-        <Insets top="20.0" />
+        <Insets top="15.0" />
       </padding>
     </VBox>
   </children>

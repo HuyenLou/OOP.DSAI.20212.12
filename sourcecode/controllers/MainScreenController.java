@@ -187,10 +187,18 @@ public class MainScreenController {
         btnVolume.setOnAction(e -> {
             volumePane.setVisible(!volumePane.isVisible());
         });
+
         volumePane.setVisible(false);
+
+        volumeSlider.valueProperty().addListener((o, oldValue, newValue) -> {
+            player.setVolume(newValue.floatValue());
+        });
+        volumeSlider.setValue(75.0);
+
         btnStyles.setOnAction(e -> {
             OptionStyles.setVisible(!volumePane.isVisible());
         });
+
         OptionStyles.setVisible(false);
         btnStyles.setOnAction(e -> {
             OptionStyles.setVisible(!OptionStyles.isVisible());
@@ -615,7 +623,7 @@ public class MainScreenController {
     @FXML 
     void showList(ActionEvent event) {
     	try {
-            final String CART_FXML_FILE_PATH= "/screens/RecordList.fxml";
+            final String CART_FXML_FILE_PATH= "/RecordList.fxml";
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(CART_FXML_FILE_PATH));
             fxmlLoader.setController(new RecordListController());
             Parent root = fxmlLoader.load();

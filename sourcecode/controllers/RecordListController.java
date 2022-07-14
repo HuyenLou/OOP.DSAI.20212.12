@@ -54,7 +54,7 @@ public class RecordListController {
     }
     @FXML
     public void initialize() {
-    	final String ITEM_FXML_FILE_PATH="/screens/Item.fxml";
+    	final String ITEM_FXML_FILE_PATH="/Item.fxml";
     	int column = 0;
     	int row=1;
     	 String[] pathnames;
