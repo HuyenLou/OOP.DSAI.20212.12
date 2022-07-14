@@ -28,8 +28,7 @@ public abstract class Player {
         jfPlayer.close();
     }
 
-    protected void playNote(String str, int octave) {
-        text=text+ str+ " ";
+    private Note getNote(String str, int octave) {
         int note;
         switch (str.charAt(0)) {
             case 'C': note = 0; break;
@@ -41,7 +40,7 @@ public abstract class Player {
             case 'B': note = 11; break;
             default:
                 System.out.println("Invalid note " + str.charAt(0));
-                return;
+                return null;
         }
         if (str.contains("#")) note += 1;
         if (str.contains("b")) note -= 1;
@@ -50,7 +49,16 @@ public abstract class Player {
             octave += c - '1';
         }
         note += octave * 12;
-        jfPlayer.startNote(new Note(note));
+        return new Note(note);
+    }
+
+    protected void playNote(String str, int octave) {
+        text=text+ str+ " ";
+        jfPlayer.startNote(getNote(str, octave));
+    }
+
+    protected void stopNote(String str, int octave) {
+        jfPlayer.stopNote(getNote(str, octave));
     }
 
     public void setVolume(float volume) {
@@ -63,4 +71,5 @@ public abstract class Player {
     }
 
     public abstract void playNote(String note);
+    public abstract void stopNote(String note);
 }
