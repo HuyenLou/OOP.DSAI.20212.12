@@ -671,6 +671,7 @@ public class MainScreenController {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+            player.stopNote(notes[i]);
     	}
     }
     @FXML 
