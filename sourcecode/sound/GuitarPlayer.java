@@ -7,7 +7,7 @@ public class GuitarPlayer extends Player {
 
     @Override
     public void playNote(String note) {
-        playNote(note, 5);
+        playNote(note, 6);
     }
 
     @Override
