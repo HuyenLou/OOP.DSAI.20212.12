@@ -43,7 +43,7 @@ public class HelpScreenController {
 	
     public void showScreen() throws Exception {
         Stage helpStage = new Stage();
-        final String FXML_FILE_PATH = "/screens/HelpScreen.fxml/";
+        final String FXML_FILE_PATH = "/HelpScreen.fxml/";
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(FXML_FILE_PATH));
         HelpScreenController helpScreenController = new HelpScreenController();
         fxmlLoader.setController(helpScreenController);

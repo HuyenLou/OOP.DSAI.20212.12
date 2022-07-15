@@ -18,6 +18,7 @@ import javafx.scene.layout.HBox;
 
 import javafx.scene.layout.Pane;
 
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sound.PianoPlayer;
 import sound.GuitarPlayer;
@@ -144,16 +145,36 @@ public class MainScreenController {
     final String releasedBlackNStyle = "-fx-background-color: black; -fx-background-radius: 10;";
     
     @FXML 
-    void usePiano() {
-    	player = new PianoPlayer();
+    void usePiano(ActionEvent event) {
+
+        player = new PianoPlayer();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("INFORMATION");
+        alert.setHeaderText(null);
+        alert.setContentText("changed to piano style");
+        alert.showAndWait();
+    }
+
+    @FXML 
+    void useGuitar(ActionEvent event) {
+
+        player = new GuitarPlayer();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("INFORMATION");
+        alert.setHeaderText(null);
+        alert.setContentText("changed to guitar style");
+        alert.showAndWait();
+
     } 
     @FXML 
-    void useGuitar() {
-    	player = new GuitarPlayer();
-    } 
-    @FXML 
-    void useOrgan() {
-    	player = new OrganPlayer();
+    void useOrgan(ActionEvent event) {
+
+        player = new OrganPlayer();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("INFORMATION");
+        alert.setHeaderText(null);
+        alert.setContentText("changed to organ style");
+        alert.showAndWait();
     } 
 
     @FXML
@@ -188,6 +209,10 @@ public class MainScreenController {
             volumePane.setVisible(!volumePane.isVisible());
         });
         volumePane.setVisible(false);
+        volumeSlider.valueProperty().addListener((o, oldValue, newValue) -> {
+            player.setVolume(newValue.floatValue());
+        });
+        volumeSlider.setValue(75.0);
         btnStyles.setOnAction(e -> {
             OptionStyles.setVisible(!volumePane.isVisible());
         });
@@ -613,19 +638,8 @@ public class MainScreenController {
     private Button showListButton;
     
     @FXML 
-    void showList(ActionEvent event) {
-    	try {
-            final String CART_FXML_FILE_PATH= "/screens/RecordList.fxml";
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(CART_FXML_FILE_PATH));
-            fxmlLoader.setController(new RecordListController());
-            Parent root = fxmlLoader.load();
-            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-//            stage.setTitle("");
-            stage.show();
-            
-    	} catch(IOException e) {
-    		e.printStackTrace();
-    	}
+    void showList(ActionEvent event) throws Exception {
+        RecordListController recordListController = new RecordListController();
+        recordListController.showScreen();
     }
 }

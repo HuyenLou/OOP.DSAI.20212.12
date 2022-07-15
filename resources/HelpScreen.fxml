@@ -7,10 +7,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="588.0" style="-fx-background-color: #6674bf;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
   <children>
-    <VBox prefHeight="655.0" prefWidth="562.0">
+    <VBox prefHeight="655.0" prefWidth="562.0" styleClass="stack-pane" stylesheets="@helpBackground.css">
       <children>
         <Label alignment="CENTER" text="Instructions" textFill="#f7f7fa">
           <font>
