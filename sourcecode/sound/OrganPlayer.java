@@ -7,9 +7,10 @@ public class OrganPlayer extends Player {
 
     @Override
     public void playNote(String note) {
-        playNote(note, 5);
+        playNote(note, 4);
     }
+    
     @Override
-    public void stopNote(String note) { stopNote(note, 5); }
+    public void stopNote(String note) { stopNote(note, 4); }
 }
 
