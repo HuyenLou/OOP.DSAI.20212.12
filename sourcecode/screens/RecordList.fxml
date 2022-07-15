@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #06064b;" styleClass="stack-pane" stylesheets="@effec.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #06064b;" styleClass="stack-pane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
@@ -38,4 +39,8 @@
    <padding>
       <Insets left="20.0" />
    </padding>
+   <stylesheets>
+      <URL value="@effec.css" />
+      <URL value="@../../resources/effec.css" />
+   </stylesheets>
 </VBox>

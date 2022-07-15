@@ -26,33 +26,6 @@ public class RecordListController {
     @FXML 
     private Button backButton;
 
-    @FXML 
-    public void back(ActionEvent event) throws IOException {
-    	
-    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/MainScreens.fxml"));
-        Parent root = loader.load();
-        MainScreenController controller = loader.getController();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-        scene.addEventFilter(KeyEvent.KEY_PRESSED, e -> {
-            controller.pressNote((char)e.getCode().getCode(), e.isShiftDown());
-            e.consume();
-        });
-        scene.addEventFilter(KeyEvent.KEY_RELEASED, e -> {
-            controller.releaseNote((char)e.getCode().getCode(), e.isShiftDown());
-            e.consume();
-        });
-        scene.addEventFilter(MouseEvent.MOUSE_RELEASED, e -> {
-            controller.hideVolumeController();
-        });
-
-        stage.setOnCloseRequest(e -> {
-            controller.closePlayer();
-        });
-        stage.setTitle("Virtual piano");
-        stage.setScene(scene);
-        stage.show();
-    }
     @FXML
     public void initialize() {
     	final String ITEM_FXML_FILE_PATH="/Item.fxml";
@@ -89,7 +62,7 @@ public class RecordListController {
     }
     public void showScreen() throws Exception{
         Stage RecordStage = new Stage();
-        final String CART_FXML_FILE_PATH= "/RecordList.fxml/";
+        final String CART_FXML_FILE_PATH= "/RecordList.fxml";
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(CART_FXML_FILE_PATH));
         fxmlLoader.setController(new RecordListController());
         Parent root = fxmlLoader.load();

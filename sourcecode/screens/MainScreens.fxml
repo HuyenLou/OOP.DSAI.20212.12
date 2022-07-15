@@ -41,7 +41,7 @@
             <Insets />
          </StackPane.margin>
       </Pane>
-      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1530.0" styleClass="background" stylesheets="@effec.css">
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1530.0">
          <children>
             <TilePane alignment="CENTER" hgap="130.0" prefHeight="200.0" prefWidth="200.0">
                <children>
@@ -52,7 +52,7 @@
                      <graphic>
                         <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../resources/images/icons8-help-24.png" />
+                              <Image url="@images/icons8-help-24.png" />
                            </image>
                         </ImageView>
                      </graphic>

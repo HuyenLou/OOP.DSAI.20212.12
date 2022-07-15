@@ -666,12 +666,14 @@ public class MainScreenController {
     	for(int i=0; i< notes.length; i++){
             player.playNote(notes[i]);
             try {
-                Thread.sleep(1000);
+                Thread.sleep(700);
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+            player.stopNote(notes[i]);
     	}
+
     }
     @FXML 
     void clearText(ActionEvent event) {
