@@ -1,0 +1,9 @@
+.stack-pane {
+  -fx-background-image: url('images/i1.jpg');
+  -fx-background-size: cover;
+}
+
+.stack-pane2 {
+  -fx-background-image: url('images/i3.jpeg');
+  -fx-background-size: cover;
+}
