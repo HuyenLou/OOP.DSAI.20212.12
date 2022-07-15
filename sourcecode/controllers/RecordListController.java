@@ -28,7 +28,7 @@ public class RecordListController {
 
     @FXML
     public void initialize() {
-    	final String ITEM_FXML_FILE_PATH="/Item.fxml";
+    	final String ITEM_FXML_FILE_PATH="screens/Item.fxml";
     	int column = 0;
     	int row=1;
     	 String[] pathnames;
@@ -62,7 +62,7 @@ public class RecordListController {
     }
     public void showScreen() throws Exception{
         Stage RecordStage = new Stage();
-        final String CART_FXML_FILE_PATH= "/RecordList.fxml";
+        final String CART_FXML_FILE_PATH= "/screens/RecordList.fxml";
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(CART_FXML_FILE_PATH));
         fxmlLoader.setController(new RecordListController());
         Parent root = fxmlLoader.load();
