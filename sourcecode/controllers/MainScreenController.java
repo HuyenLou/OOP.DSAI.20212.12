@@ -683,21 +683,10 @@ public class MainScreenController {
     
     @FXML 
     private Button showListButton;
-    
-    @FXML 
-    void showList(ActionEvent event)  {
-        try {
-            final String CART_FXML_FILE_PATH= "/RecordList.fxml";
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(CART_FXML_FILE_PATH));
-            fxmlLoader.setController(new RecordListController());
-            Parent root = fxmlLoader.load();
-            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-//            stage.setTitle("");
-            stage.show();
 
-        } catch(IOException e) {
-            e.printStackTrace();
-        }
+    @FXML
+    void showList(ActionEvent event) throws Exception {
+        RecordListController recordListController = new RecordListController();
+        recordListController.showScreen();
     }
 }

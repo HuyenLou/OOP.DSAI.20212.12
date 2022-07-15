@@ -87,4 +87,17 @@ public class RecordListController {
     	}
 
     }
+    public void showScreen() throws Exception{
+        Stage RecordStage = new Stage();
+        final String CART_FXML_FILE_PATH= "/RecordList.fxml/";
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(CART_FXML_FILE_PATH));
+        fxmlLoader.setController(new RecordListController());
+        Parent root = fxmlLoader.load();
+
+        RecordStage.initModality(Modality.APPLICATION_MODAL);
+
+        RecordStage.setTitle("Record List Screen");
+        RecordStage.setScene(new Scene(root));
+        RecordStage.show();
+    }
 }
