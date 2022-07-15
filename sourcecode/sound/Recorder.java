@@ -51,7 +51,7 @@ public class Recorder {
 			
             System.out.println("Start recording...");
             while (true) {
-            	File file = new File("/OOP.DSAI.20212.12/resources/audio/RecordAudio"+ String.valueOf(count+1)+".wav");
+            	File file = new File("resources/audio/RecordAudio"+ String.valueOf(count+1)+".wav");
             	if (file.exists()== true) {
             		count+=1;
             		
@@ -61,7 +61,7 @@ public class Recorder {
             	}
             }
             count+= 1;
-            file_path = "/OOP.DSAI.20212.12/resources/audio/RecordAudio"+ String.valueOf(count)+".wav";
+            file_path = "resources/audio/RecordAudio"+ String.valueOf(count)+".wav";
             File wavFile = new File(file_path);
             AudioSystem.write(ais, fileType, wavFile);
 			

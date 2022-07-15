@@ -40,7 +40,7 @@ public class ItemController {
 
     @FXML
     void btnPlayClicked(ActionEvent event) {
-    	 File sound = new File("/OOP.DSAI.20212.12/resources/audio/"+pathname);
+    	 File sound = new File("resources/audio/"+pathname);
 
 	        try {
 	            AudioInputStream ais = AudioSystem.getAudioInputStream(sound);

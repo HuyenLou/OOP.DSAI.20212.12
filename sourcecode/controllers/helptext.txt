@@ -1,3 +1,36 @@
-Welcome to Recursive Arts Virtual Piano simulator
-the ultimate online piano application that everyone can play 
-Enjoy the sound of a world-class Grand Piano
+Welcome to Recursive Arts Virtual Piano simulator the ultimate online piano
+application that everyone can play. Enjoy the sound of a world-class Grand Piano.
+
+
+You can play Virtual Piano either by keyboard or by mouse. Each note you played is
+shown in the music sheet (the white area right above the piano keyboard).
+
+
+PIANO KEYBOARD DESIGN:
+
+White keys: are  divided into 4 groups. Each group consists of 7 notes Do, Re, Mi, Fa,
+Sol, La, Si corresponding to C, D, E, F, G, A, B denoted in the keyboard. The number
+next to each note shows the pitch of the note, for example C1, C2, C3, C4. The higher
+the pitch is, the higher the note.
+
+Black keys: all keys are flat. Each flat key has its pitch half a step lower than which
+of the corresponding white key, for example Db1 is half a step lower in pitch than D1.
+
+
+BUTTONS:
+
+Styles: helps you change how the Virtual Piano sounds.
+            There are 3 styles for you to choose (piano, guitar, organ)
+
+Volume: after clicking on the button, a slide bar is shown, drag it to
+               adjust the loudness of the sound
+
+Record: allows you recording the music you play by Virtual Piano
+
+showList: show the list of records
+
+Exit: exit the application
+
+Replay: replay the music sheet you create during play Virtual Piano
+
+Clear: start a new music sheet

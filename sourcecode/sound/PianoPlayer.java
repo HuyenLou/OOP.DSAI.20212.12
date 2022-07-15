@@ -9,4 +9,9 @@ public class PianoPlayer extends Player {
     public void playNote(String note) {
         playNote(note, 5);
     }
+
+    @Override
+    public void stopNote(String note) {
+
+    }
 }

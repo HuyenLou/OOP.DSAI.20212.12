@@ -15,6 +15,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class RecordListController {
@@ -25,40 +26,13 @@ public class RecordListController {
     @FXML 
     private Button backButton;
 
-    @FXML 
-    public void back(ActionEvent event) throws IOException {
-    	
-    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/screens/MainScreens.fxml"));
-        Parent root = loader.load();
-        MainScreenController controller = loader.getController();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-        scene.addEventFilter(KeyEvent.KEY_PRESSED, e -> {
-            controller.pressNote((char)e.getCode().getCode(), e.isShiftDown());
-            e.consume();
-        });
-        scene.addEventFilter(KeyEvent.KEY_RELEASED, e -> {
-            controller.releaseNote((char)e.getCode().getCode(), e.isShiftDown());
-            e.consume();
-        });
-        scene.addEventFilter(MouseEvent.MOUSE_RELEASED, e -> {
-            controller.hideVolumeController();
-        });
-
-        stage.setOnCloseRequest(e -> {
-            controller.closePlayer();
-        });
-        stage.setTitle("Virtual piano");
-        stage.setScene(scene);
-        stage.show();
-    }
     @FXML
     public void initialize() {
-    	final String ITEM_FXML_FILE_PATH="/screens/Item.fxml";
+    	final String ITEM_FXML_FILE_PATH="screens/Item.fxml";
     	int column = 0;
     	int row=1;
     	 String[] pathnames;
-    	 File f = new File("/OOP.DSAI.20212.12/resources/audio");
+    	 File f = new File("resources/audio");
 
          // Populates the array with names of files and directories
          pathnames = f.list();
@@ -85,5 +59,18 @@ public class RecordListController {
     		
     	}
 
-    }      
+    }
+    public void showScreen() throws Exception{
+        Stage RecordStage = new Stage();
+        final String CART_FXML_FILE_PATH= "/screens/RecordList.fxml";
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(CART_FXML_FILE_PATH));
+        fxmlLoader.setController(new RecordListController());
+        Parent root = fxmlLoader.load();
+
+        RecordStage.initModality(Modality.APPLICATION_MODAL);
+
+        RecordStage.setTitle("Record List Screen");
+        RecordStage.setScene(new Scene(root));
+        RecordStage.show();
+    }
 }
